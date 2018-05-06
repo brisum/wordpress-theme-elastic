@@ -3,60 +3,47 @@
     "preferred-install": "source"
   },
   "require": {
-    "brisum/component": "dev-master",
-    "brisum/lib": "dev-master",
-    "brisum/wordpress": "dev-master",
-    "olefredrik/foundationpress": "^2.7",
-    "brisum/lib-tree-builder": "^1.0",
-    "brisum/lib-object-manager": "^0.1.0",
-    "brisum/lib-excel-xlsx": "^0.1.0",
-    "brisum/wordpress-module-theme": "^0.1.0"
+    "brisum/lib-array-storage": "dev-master",
+    "brisum/lib-console": "dev-master",
+    "brisum/lib-excel-xlsx": "dev-master",
+    "brisum/lib-file-uploader": "dev-master",
+    "brisum/lib-form": "dev-master",
+    "brisum/lib-object-manager": "dev-master",
+    "brisum/lib-spelling": "dev-master",
+    "brisum/lib-translit": "dev-master",
+    "brisum/lib-tree-builder": "dev-master",
+    "brisum/lib-view": "dev-master",
+    "brisum/lib-visual-component": "dev-master",
+
+    "brisum/module-http-redirect-rule": "dev-master",
+    "brisum/module-inventory-synchronization": "dev-master",
+    "brisum/module-mailing": "dev-master",
+
+    "brisum/woocommerce-widget-layered-navigation": "dev-master",
+
+    "brisum/wordpress-module-breadcrumbs": "dev-master",
+    "brisum/wordpress-module-form-popup": "dev-master",
+    "brisum/wordpress-module-image-editor": "dev-master",
+    "brisum/wordpress-module-menu": "dev-master",
+    "brisum/wordpress-module-optimization": "dev-master",
+    "brisum/wordpress-module-post-hierarchy": "dev-master",
+    "brisum/wordpress-module-post-panel": "dev-master",
+    "brisum/wordpress-module-post-tabs": "dev-master",
+    "brisum/wordpress-module-post-type": "dev-master",
+    "brisum/wordpress-module-post-type-faq": "dev-master",
+    "brisum/wordpress-module-post-type-page": "dev-master",
+    "brisum/wordpress-module-seo-data": "dev-master",
+    "brisum/wordpress-module-theme": "dev-master",
+    "wordpress-module-theme-options": "dev-master",
+
+    "wordpress-plugin-query-monitor": "dev-master"
   },
   "autoload": {
     "psr-4": {
-      "ThemeDummy\\": ["wp-content/themes/dummy/module"],
       "Brisum\\Lib\\": ["vendor/brisum/lib"],
       "Brisum\\Component\\": ["vendor/brisum/component"],
       "Brisum\\Wordpress\\": ["vendor/brisum/wordpress"]
     },
     "classmap": []
-  },
-  "repositories": [
-    {
-      "type": "package",
-      "package": {
-        "name": "brisum/component",
-        "version": "dev-master",
-        "source": {
-          "url": "git@bitbucket.org:brisum/php-component.git",
-          "type": "git",
-          "reference": "origin/master"
-        }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "brisum/lib",
-        "version": "dev-master",
-        "source": {
-          "url": "git@bitbucket.org:brisum/php-lib.git",
-          "type": "git",
-          "reference": "origin/master"
-        }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "brisum/wordpress",
-        "version": "dev-master",
-        "source": {
-          "url": "git@bitbucket.org:brisum/wordpress-utils.git",
-          "type": "git",
-          "reference": "origin/master"
-        }
-      }
-    }
-  ]
+  }
 }

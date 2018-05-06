@@ -1,4 +1,9 @@
 <?php
+
+
+require_once __DIR__ . '/bootstrap.php';
+require_once __DIR__ . '/module/init.php';
+
 /**
  * Twenty Seventeen functions and definitions
  *
