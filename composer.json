@@ -12,14 +12,11 @@
     "brisum/lib-spelling": "dev-master",
     "brisum/lib-translit": "dev-master",
     "brisum/lib-tree-builder": "dev-master",
-    "brisum/lib-view": "dev-master",
-    "brisum/lib-visual-component": "dev-master",
+    "brisum/lib-view": "^0.2.0",
 
     "brisum/module-http-redirect-rule": "dev-master",
     "brisum/module-inventory-synchronization": "dev-master",
     "brisum/module-mailing": "dev-master",
-
-    "brisum/woocommerce-widget-layered-navigation": "dev-master",
 
     "brisum/wordpress-module-breadcrumbs": "dev-master",
     "brisum/wordpress-module-form-popup": "dev-master",
@@ -33,10 +30,7 @@
     "brisum/wordpress-module-post-type-faq": "dev-master",
     "brisum/wordpress-module-post-type-page": "dev-master",
     "brisum/wordpress-module-seo-data": "dev-master",
-    "brisum/wordpress-module-theme": "dev-master",
-    "wordpress-module-theme-options": "dev-master",
-
-    "wordpress-plugin-query-monitor": "dev-master"
+    "brisum/wordpress-module-theme": "dev-master"
   },
   "autoload": {
     "psr-4": {
