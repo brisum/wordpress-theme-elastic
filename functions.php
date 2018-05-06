@@ -1,6 +1,5 @@
 <?php
 
-
 require_once __DIR__ . '/bootstrap.php';
 require_once __DIR__ . '/module/init.php';
 
@@ -62,12 +61,6 @@ function twentyseventeen_setup() {
 
 	// Set the default content width.
 	$GLOBALS['content_width'] = 525;
-
-	// This theme uses wp_nav_menu() in two locations.
-	register_nav_menus( array(
-		'top'    => __( 'Top Menu', 'twentyseventeen' ),
-		'social' => __( 'Social Links Menu', 'twentyseventeen' ),
-	) );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -258,7 +251,7 @@ function twentyseventeen_content_width() {
 	 */
 	$GLOBALS['content_width'] = apply_filters( 'twentyseventeen_content_width', $content_width );
 }
-add_action( 'template_redirect', 'twentyseventeen_content_width', 0 );
+//add_action( 'template_redirect', 'twentyseventeen_content_width', 0 );
 
 /**
  * Register custom fonts.
@@ -308,7 +301,7 @@ function twentyseventeen_resource_hints( $urls, $relation_type ) {
 
 	return $urls;
 }
-add_filter( 'wp_resource_hints', 'twentyseventeen_resource_hints', 10, 2 );
+//add_filter( 'wp_resource_hints', 'twentyseventeen_resource_hints', 10, 2 );
 
 /**
  * Register widget area.
@@ -346,7 +339,7 @@ function twentyseventeen_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'twentyseventeen_widgets_init' );
+//add_action( 'widgets_init', 'twentyseventeen_widgets_init' );
 
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with ... and
@@ -369,7 +362,7 @@ function twentyseventeen_excerpt_more( $link ) {
 	);
 	return ' &hellip; ' . $link;
 }
-add_filter( 'excerpt_more', 'twentyseventeen_excerpt_more' );
+//add_filter( 'excerpt_more', 'twentyseventeen_excerpt_more' );
 
 /**
  * Handles JavaScript detection.
@@ -381,7 +374,7 @@ add_filter( 'excerpt_more', 'twentyseventeen_excerpt_more' );
 function twentyseventeen_javascript_detection() {
 	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 }
-add_action( 'wp_head', 'twentyseventeen_javascript_detection', 0 );
+//add_action( 'wp_head', 'twentyseventeen_javascript_detection', 0 );
 
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
@@ -391,7 +384,7 @@ function twentyseventeen_pingback_header() {
 		printf( '<link rel="pingback" href="%s">' . "\n", get_bloginfo( 'pingback_url' ) );
 	}
 }
-add_action( 'wp_head', 'twentyseventeen_pingback_header' );
+//add_action( 'wp_head', 'twentyseventeen_pingback_header' );
 
 /**
  * Display custom color CSS.
@@ -408,7 +401,7 @@ function twentyseventeen_colors_css_wrap() {
 		<?php echo twentyseventeen_custom_colors_css(); ?>
 	</style>
 <?php }
-add_action( 'wp_head', 'twentyseventeen_colors_css_wrap' );
+//add_action( 'wp_head', 'twentyseventeen_colors_css_wrap' );
 
 /**
  * Enqueue scripts and styles.
@@ -462,7 +455,7 @@ function twentyseventeen_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'twentyseventeen_scripts' );
+//add_action( 'wp_enqueue_scripts', 'twentyseventeen_scripts' );
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
@@ -490,7 +483,7 @@ function twentyseventeen_content_image_sizes_attr( $sizes, $size ) {
 
 	return $sizes;
 }
-add_filter( 'wp_calculate_image_sizes', 'twentyseventeen_content_image_sizes_attr', 10, 2 );
+//add_filter( 'wp_calculate_image_sizes', 'twentyseventeen_content_image_sizes_attr', 10, 2 );
 
 /**
  * Filter the `sizes` value in the header image markup.
@@ -508,7 +501,7 @@ function twentyseventeen_header_image_tag( $html, $header, $attr ) {
 	}
 	return $html;
 }
-add_filter( 'get_header_image_tag', 'twentyseventeen_header_image_tag', 10, 3 );
+//add_filter( 'get_header_image_tag', 'twentyseventeen_header_image_tag', 10, 3 );
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
@@ -530,7 +523,7 @@ function twentyseventeen_post_thumbnail_sizes_attr( $attr, $attachment, $size ) 
 
 	return $attr;
 }
-add_filter( 'wp_get_attachment_image_attributes', 'twentyseventeen_post_thumbnail_sizes_attr', 10, 3 );
+//add_filter( 'wp_get_attachment_image_attributes', 'twentyseventeen_post_thumbnail_sizes_attr', 10, 3 );
 
 /**
  * Use front-page.php when Front page displays is set to a static page.

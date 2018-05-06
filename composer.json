@@ -30,13 +30,19 @@
     "brisum/wordpress-module-post-type-faq": "dev-master",
     "brisum/wordpress-module-post-type-page": "dev-master",
     "brisum/wordpress-module-seo-data": "dev-master",
-    "brisum/wordpress-module-theme": "dev-master"
+    "brisum/wordpress-module-theme": "dev-master",
+    "brisum/lib-visual-component": "^0.1.0",
+    "brisum/wordpress-plugin-query-monitor": "^0.1.0"
   },
   "autoload": {
     "psr-4": {
+      "Brisum\\Wordpress\\PostType\\Slider\\": ["vendor/brisum/wordpress-module-post-type-slider/src"],
+
+      "Elastic\\": ["module"],
       "Brisum\\Lib\\": ["vendor/brisum/lib"],
       "Brisum\\Component\\": ["vendor/brisum/component"],
-      "Brisum\\Wordpress\\": ["vendor/brisum/wordpress"]
+      "Brisum\\Wordpress\\": ["vendor/brisum/wordpress"],
+      "Brisum\\Wordpress\\CustomField\\": ["vendor/brisum/wordpress-module-custom-field/src"]
     },
     "classmap": []
   }

@@ -18,8 +18,17 @@ require_once __DIR__ . '/../vendor/brisum/wordpress-module-theme/src/constant.ph
 $load = [
     // vendor
     THEME_DIR . 'vendor/brisum/wordpress-module-theme/src/init.php',
+    THEME_DIR . 'vendor/brisum/wordpress-module-custom-field/src/init.php',
+    THEME_DIR . 'vendor/brisum/wordpress-module-post-type-slider/src/init.php',
+    THEME_DIR . 'vendor/brisum/wordpress-plugin-query-monitor/src/init.php',
+
+    // constants
+    THEME_DIR . 'module/Resources/constant.php',
 
     // module
+    THEME_DIR . 'module/Menu/init.php',
+    THEME_DIR . 'module/Product/init.php',
+    THEME_DIR . 'module/Resources/init.php',
 ];
 
 $loadAdmin = [

@@ -11,10 +11,12 @@
   "dependencies": {
     "assets-webpack-plugin": "^3.5.1",
     "autoprefixer-loader": "^3.1.0",
+    "bootstrap": "^4.1.1",
     "bundle-loader": "^0.5.5",
     "css-loader": "^0.21.0",
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.8.5",
+    "font-awesome": "^4.7.0",
     "fontawesome": "^4.7.2",
     "foundation-sites": "^6.4.4-rc1",
     "imagesloaded": "^4.1.3",

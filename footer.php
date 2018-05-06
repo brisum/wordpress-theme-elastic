@@ -1,13 +1,11 @@
-<!-- Footer Section -->
-<div id="footer">
+<footer class="footer">
     <div class="container text-center">
-        <p>
+        <p class="text-muted">
             &copy; <?php echo implode(' &ndash; ', array_unique(['2017', date('Y')])); ?>
-            &nbsp;&nbsp;
             <?php // echo $themeOptionsService->get('copyright'); ?>
         </p>
     </div>
-</div>
+</footer>
 
 <?php wp_footer(); ?>
 </body>

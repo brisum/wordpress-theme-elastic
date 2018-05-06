@@ -1,0 +1,19 @@
+{
+  "common-height.widget": {
+    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/common-height.widget.0.js?e5371421c942273b7029"
+  },
+  "main": {
+    "js": "/wp-content/themes/elastic/resources/assets/dist/main.js?cf7e44f8cded2b8c10c6"
+  },
+  "admin_main": {
+    "js": "/wp-content/themes/elastic/resources/assets/dist/admin_main.js?eeddd6bcd0740efac7ca"
+  },
+  "style": {
+    "js": "/wp-content/themes/elastic/resources/assets/dist/style.js?9f4f7dc66cf8ee4f7539",
+    "css": "/wp-content/themes/elastic/resources/assets/dist/style.css?de9cfeb1a1561001d98e1ca8e4dc9857"
+  },
+  "admin_style": {
+    "js": "/wp-content/themes/elastic/resources/assets/dist/admin_style.js?faf1bc5e5d5a033a615d",
+    "css": "/wp-content/themes/elastic/resources/assets/dist/admin_style.css?d41d8cd98f00b204e9800998ecf8427e"
+  }
+}

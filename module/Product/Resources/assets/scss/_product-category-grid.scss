@@ -1,0 +1,14 @@
+.product-category-grid {
+  .product-category {
+    border: 1px solid $gray-100;
+    margin-bottom: $global-margin;
+
+    .name {
+      width: 100%;
+      height: 60px;
+      overflow: hidden;
+      padding: $global-padding / 2;
+      background: rgba($gray-100, 0.5);
+    }
+  }
+}

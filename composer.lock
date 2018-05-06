@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "41da0a2ba23853faa02c865a2c2288c0",
+    "content-hash": "c9e9e1fd079f2db38d707736a6e3fa36",
     "packages": [
         {
             "name": "brisum/lib-array-storage",
@@ -388,6 +388,49 @@
                 "view"
             ],
             "time": "2017-03-13T20:33:29+00:00"
+        },
+        {
+            "name": "brisum/lib-visual-component",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/brisum/php-lib-visual-component.git",
+                "reference": "ed06a112e199c3a3cc33979c15c4af9ab45d958f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brisum/php-lib-visual-component/zipball/ed06a112e199c3a3cc33979c15c4af9ab45d958f",
+                "reference": "ed06a112e199c3a3cc33979c15c4af9ab45d958f",
+                "shasum": ""
+            },
+            "require": {
+                "brisum/lib-view": "^0.2.0",
+                "php": "^5.6 || ^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Brisum\\Lib\\VisualComponent\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oleksandr Manchenko",
+                    "email": "omanchenko@brisum.com",
+                    "homepage": "http://brisum.com"
+                }
+            ],
+            "description": "Visual Component",
+            "homepage": "https://github.com/brisum/php-lib-visual-component",
+            "keywords": [
+                "component",
+                "visual"
+            ],
+            "time": "2017-03-13T20:55:10+00:00"
         },
         {
             "name": "brisum/module-http-redirect-rule",
@@ -1004,6 +1047,44 @@
                 "wordpress"
             ],
             "time": "2017-11-30T22:12:31+00:00"
+        },
+        {
+            "name": "brisum/wordpress-plugin-query-monitor",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/brisum/wordpress-plugin-query-monitor.git",
+                "reference": "80092dd846b271ad0290deb46086ea7e5519bc68"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brisum/wordpress-plugin-query-monitor/zipball/80092dd846b271ad0290deb46086ea7e5519bc68",
+                "reference": "80092dd846b271ad0290deb46086ea7e5519bc68",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Brisum\\Wordpress\\Plugin\\QueryMonitor\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oleksandr Manchenko",
+                    "email": "omanchenko@brisum.com",
+                    "homepage": "http://brisum.com"
+                }
+            ],
+            "description": "Wordpress add-on for Query Monitor",
+            "homepage": "https://github.com/brisum/wordpress-plugin-query-monitor",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2017-05-05T17:11:05+00:00"
         },
         {
             "name": "doctrine/inflector",

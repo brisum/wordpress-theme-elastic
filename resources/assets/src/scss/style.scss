@@ -1,0 +1,23 @@
+@import "theme/cosmo/variables";
+@import "../../../../node_modules/bootstrap/scss/bootstrap";
+@import "theme/cosmo/bootswatch";
+
+$global-margin: $grid-gutter-width / 2;
+$global-padding: $grid-gutter-width / 2;
+
+$color-green: #0E9A49;
+$color-red: #e74c3c;
+$color-blue: #2575dc;
+$color-orange: #FFA14F;
+
+@import "layout";
+
+@import "component/div-table";
+//@import "component/loader";
+//@import "component/popup";
+//@import "component/popup-confirm";
+
+@import "../../../../module/Menu/Resources/scss/top-menu";
+
+@import "../../../../module/Product/Resources/assets/scss/product-sidebar-menu";
+@import "../../../../module/Product/Resources/assets/scss/product-category-grid";

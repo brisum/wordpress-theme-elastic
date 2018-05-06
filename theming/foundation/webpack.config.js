@@ -21,8 +21,8 @@ const extractTextPluginCss = new ExtractTextPlugin({
 class Project {
     constructor() {
         this._aliases = null;
-        this.requireInitDist = __dirname + '/resources/assets/src/js/lib/require-init.dist.js';
-        this.requireInit = __dirname + '/resources/assets/src/js/lib/require-init.js';
+        this.requireInitDist = __dirname + '/resources/src/js/lib/require-init.dist.js';
+        this.requireInit = __dirname + '/resources/src/js/lib/require-init.js';
     }
 
     generateRequireInit() {
@@ -60,37 +60,46 @@ class Project {
             self._aliases = {};
 
             let vendor = {
-
+                //
             };
             Object.keys(vendor).forEach(function (alias) {
                 self._aliases[alias] = vendor[alias];
             });
 
-            let libBasePath =  __dirname + '/resources/assets/src/js/lib/';
+            let libBasePath =  __dirname + '/resources/src/js/lib/';
             glob.sync(libBasePath + '**/*.js').forEach(function (path) {
                 let alias = 'lib-' + Project.generateAliasName(path, libBasePath);
                 self._aliases[alias] = path;
             });
 
-            let widgetBasePath =  __dirname + '/resources/assets/src/js/widget/';
-            glob.sync(widgetBasePath + '**/*.js').forEach(function (path) {
-                let alias = Project.generateAliasName(path, widgetBasePath);
+            let moduleBasePath =  __dirname + '/resources/src/js/module/';
+            glob.sync(moduleBasePath + '**/*.js').forEach(function (path) {
+                let alias = Project.generateAliasName(path, moduleBasePath);
                 self._aliases[alias] = path;
             });
 
             let phpModulePath =  __dirname + '/module/';
-            glob.sync(phpModulePath + '*/Resources/assets/js/**/*.js').forEach(function (path) {
-                if (path.match(/\/[A-Z][^\/]*\.js$/) || path.match(/\/src\/Core\//)) {
+            glob.sync(phpModulePath + '*/Resources/js/**/*.js').forEach(function (path) {
+                if (path.match(/\/[A-Z][^\/]*\.js$/)) {
                     return;
                 }
 
-                let alias = path.match(/([^\/]+)\.js$/)[1];
+                let basePath = path.replace(
+                    /^(.+\/module\/[^\/]+\/Resources\/js\/)(.+)$/g,
+                    function (_, match1, match2) { return match1; }
+                    ),
+                    alias = Project.generateAliasName(path, basePath);
                 self._aliases[alias] = path;
             });
 
+            let adminBasePath =  __dirname + '/resources/src/js/admin/';
+            glob.sync(adminBasePath + '**/*.js').forEach(function (path) {
+                let alias = 'admin-' + Project.generateAliasName(path, adminBasePath);
+                self._aliases[alias] = path;
+            });
+
+
             delete self._aliases['lib-require-init.dist'];
-            delete self._aliases['main'];
-            delete self._aliases['admin-main'];
 
             console.log(self._aliases);
         }
@@ -102,10 +111,10 @@ class Project {
         return filePath
             .replace(basePath, '')
             .replace(/\//g, '-')
-            // .replace(
-            //     /([a-z0-9-])([A-Z])/g,
-            //     function (_, char1, char2) { return ('-' !== char1 ? char1 : '') + '-' + char2.toLowerCase(); }
-            // )
+            .replace(
+                /([a-z0-9-])([A-Z])/g,
+                function (_, char1, char2) { return ('-' !== char1 ? char1 : '') + '-' + char2.toLowerCase(); }
+            )
             .replace(/\.[^\.]+$/, '');
     }
 
@@ -119,8 +128,8 @@ class Project {
 
         plugins.push(new AssetsPlugin({
             prettyPrint: true,
-            filename: 'assets.json',
-            path: __dirname + '/resources/assets/dist'
+            filename: 'resources.json',
+            path: __dirname + '/resources/dist'
         }));
 
         plugins.push(new ConcatPlugin({
@@ -132,19 +141,7 @@ class Project {
             filesToConcat: [
                 __dirname + '/node_modules/jquery/dist/jquery.min.js',
                 __dirname + '/node_modules/jquery-migrate/dist/jquery-migrate.min.js',
-                __dirname + '/node_modules/what-input/dist/what-input.min.js',
-                __dirname + '/node_modules/jquery.cookie/jquery.cookie.js'
-            ]
-        }));
-
-        plugins.push(new ConcatPlugin({
-            uglify: NODE_ENV === 'production',
-            useHash: true, // md5 file
-            sourceMap: false, // generate sourceMap
-            name: 'bootstrap', // used in html-webpack-plugin
-            fileName: '[name].js?[hash]',
-            filesToConcat: [
-                __dirname + '/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'
+                __dirname + '/node_modules/what-input/dist/what-input.min.js'
             ]
         }));
 
@@ -169,25 +166,34 @@ let project = new Project();
 project.generateRequireInit();
 
 module.exports = {
-    context: __dirname + '/resources/assets/src',
+    context: __dirname + '/resources/src',
     entry: {
-        style: './scss/style.scss',
+        style: './scss/foundation.scss',
         main: [
+            './../../node_modules/motion-ui/dist/motion-ui.min.js',
+            './../../node_modules/foundation-sites/dist/js/foundation.min.js',
+
+            // thirdparty
+            './../../node_modules/jquery.cookie/jquery.cookie.js',
+
             // Vendor scripts
-            __dirname + '/vendor/brisum/lib-form/src/Resources/js/jquery.serializeJSON.js',
-            __dirname + '/vendor/brisum/lib-form/src/Resources/js/jquery.brisum.astute-form.js',
+            './../../vendor/brisum/lib-form/src/Resources/js/jquery.serializeJSON.js',
+            './../../vendor/brisum/lib-form/src/Resources/js/jquery.brisum.astute-form.js',
 
             './js/main.js'
         ],
-        admin_style: './scss/admin/style.scss',
+        admin_style: './scss/admin/foundation.scss',
         admin_main: [
+            './../../node_modules/foundation-sites/dist/js/foundation.min.js',
+
+            // Include your own custom scripts (located in the custom folder)
             './js/admin/main.js'
         ]
     },
 
     output: {
-        path: __dirname + '/resources/assets/dist',
-        publicPath: '/wp-content/themes/elastic/resources/assets/dist/',
+        path: __dirname + '/resources/dist',
+        publicPath: '/wp-content/themes/elastic/resources/dist/',
         filename: '[name].js?[chunkhash]',
         chunkFilename: 'js/chunk/[name].[id].js?[chunkhash]',
         library: '[name]'
@@ -206,28 +212,14 @@ module.exports = {
 
     watchOptions: {
         aggregateTimeout: 300
+        // poll: 1000
     },
 
     module: {
         rules: [
             {
-                test: /\.js$/, // include .js files
-                enforce: "pre", // preload the jshint loader
-                exclude: /node_modules|bower_components|thirdparty|/, // exclude any and all files in the node_modules folder
-                use: [
-                    {
-                        loader: "jshint-loader",
-                        options: {
-                            camelcase: true,
-                            emitErrors: false,
-                            failOnHint: false
-                        }
-                    }
-                ]
-            },
-            {
                 test: /\.js$/,
-                exclude: /node_modules/,
+                exclude: /(node_modules)/,
                 use: {
                     loader: 'babel-loader',
                     options: {

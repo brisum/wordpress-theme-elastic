@@ -1,0 +1,210 @@
+/**
+ * Foundation for Sites by ZURB
+ * Version 6.4.4-rc1
+ * foundation.zurb.com
+ * Licensed under MIT Open Source
+ */
+
+// Dependencies
+@import '../../../node_modules/foundation-sites/_vendor/normalize-scss/sass/normalize';
+@import '../../../node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/helpers/missing-dependencies';
+@import '../../../node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/helpers/true';
+@import '../../../node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/contain';
+@import '../../../node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/purge';
+@import '../../../node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/remove';
+@import '../../../node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/replace';
+@import '../../../node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/to-list';
+
+// Settings
+// import your own `settings` here or
+// import and modify the default settings through
+ @import 'global/settings';
+
+// Sass utilities
+@import '../../../node_modules/foundation-sites/scss/util/util';
+
+// Global variables and styles
+@import '../../../node_modules/foundation-sites/scss/global';
+
+// Components
+@import '../../../node_modules/foundation-sites/scss/grid/grid';
+@import '../../../node_modules/foundation-sites/scss/xy-grid/xy-grid';
+@import '../../../node_modules/foundation-sites/scss/typography/typography';
+@import '../../../node_modules/foundation-sites/scss/forms/forms';
+@import '../../../node_modules/foundation-sites/scss/components/visibility';
+@import '../../../node_modules/foundation-sites/scss/components/float';
+@import '../../../node_modules/foundation-sites/scss/components/button';
+@import '../../../node_modules/foundation-sites/scss/components/button-group';
+@import '../../../node_modules/foundation-sites/scss/components/accordion-menu';
+@import '../../../node_modules/foundation-sites/scss/components/accordion';
+@import '../../../node_modules/foundation-sites/scss/components/badge';
+@import '../../../node_modules/foundation-sites/scss/components/breadcrumbs';
+@import '../../../node_modules/foundation-sites/scss/components/callout';
+@import '../../../node_modules/foundation-sites/scss/components/card';
+@import '../../../node_modules/foundation-sites/scss/components/close-button';
+@import '../../../node_modules/foundation-sites/scss/components/drilldown';
+@import '../../../node_modules/foundation-sites/scss/components/dropdown-menu';
+@import '../../../node_modules/foundation-sites/scss/components/dropdown';
+@import '../../../node_modules/foundation-sites/scss/components/flex';
+@import '../../../node_modules/foundation-sites/scss/components/responsive-embed';
+@import '../../../node_modules/foundation-sites/scss/components/label';
+@import '../../../node_modules/foundation-sites/scss/components/media-object';
+@import '../../../node_modules/foundation-sites/scss/components/menu';
+@import '../../../node_modules/foundation-sites/scss/components/menu-icon';
+@import '../../../node_modules/foundation-sites/scss/components/off-canvas';
+@import '../../../node_modules/foundation-sites/scss/components/orbit';
+@import '../../../node_modules/foundation-sites/scss/components/pagination';
+@import '../../../node_modules/foundation-sites/scss/components/progress-bar';
+@import '../../../node_modules/foundation-sites/scss/components/reveal';
+@import '../../../node_modules/foundation-sites/scss/components/slider';
+@import '../../../node_modules/foundation-sites/scss/components/sticky';
+@import '../../../node_modules/foundation-sites/scss/components/switch';
+@import '../../../node_modules/foundation-sites/scss/components/table';
+@import '../../../node_modules/foundation-sites/scss/components/tabs';
+@import '../../../node_modules/foundation-sites/scss/components/title-bar';
+@import '../../../node_modules/foundation-sites/scss/components/top-bar';
+@import '../../../node_modules/foundation-sites/scss/components/thumbnail';
+@import '../../../node_modules/foundation-sites/scss/components/tooltip';
+@import '../../../node_modules/foundation-sites/scss/prototype/prototype';
+
+
+$global-flexbox: false;
+@include foundation-global-styles;
+@include foundation-grid;
+
+@include foundation-typography;
+@include foundation-forms;
+@include foundation-button;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-responsive-embed;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+
+@import '../../../node_modules/motion-ui/src/motion-ui';
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+
+// WP overrides
+//@import "global/wp-admin"; // Fix issues with wp-admin bar positioning
+@import "global/wp-overrides"; // Override the default WordPress styling for some elements
+
+// Third-party libraries
+//@import 'font-awesome';
+//@import 'motion-ui';
+
+// Motion UI
+//@include motion-ui-transitions;
+//@include motion-ui-animations;
+
+/*
+  My custom styles:
+  Add your scss files below to structure your project styles
+*/
+
+/* thirdparty */
+
+// Vendor
+@import "../../../vendor-brisum/wordpress/Component/Foundation/Foundation/assets/scss/settings";
+//@import "../../../vendor/brisum/wordpress/VisualComponent/LargeContent/Skin/Default/assets/scss/_style";
+//@import "../../../module/PostPanel/assets/scss/style";
+
+// Modules
+//@import "module/template";
+//@import "modules/navigation";
+//@import "modules/footer";
+//@import "modules/sidebar";
+//@import "modules/editor-style";
+//@import "module/product-media";
+//@import "module/product-options";
+//@import "module/product-preview";
+//@import "module/related-products";
+//@import "module/products-carousel";
+//@import "module/viwed-products";
+//@import "module/popup-bonus-new-account";
+//@import "module/auth";
+//@import "module/dlmenu";
+//@import "module/menu";
+
+// Components
+//@import "components/autocomplete-suggestions";
+//@import "components/breadcrumbs";
+//@import "components/pagination";
+//@import "components/label";
+//@import "components/buttons";
+//@import "components/input-increment";
+//@import "components/links";
+//@import "components/flyout";
+//@import "components/main-reveal";
+//@import "components/loader";
+//@import "components/tooltip";
+//@import "components/image-gallery";
+//@import "components/slick";
+//@import "components/overlay";
+//@import "components/tabs";
+//@import "components/tabs-vertical";
+//@import "components/color-preview";
+//@import "components/select2";
+//@import "components/delivery-city-detail";
+//@import "components/popup-message";
+//@import "components/callout";
+//@import "components/progress-bar";
+
+//@import "components/laynav";
+//@import "components/laynav-toolbar";
+//@import "components/laynav-price-range";
+//
+// Templates
+//@import "templates/fonts";
+//@import "templates/base";
+//@import "templates/template";
+//@import "templates/leftHandNavigation";
+//@import "templates/mainNavigation";
+//@import "templates/header";
+//@import "templates/footer";
+//@import "templates/footer-menu";
+
+//@import "templates/slidesjs";
+//@import "templates/hint";
+
+//@import "templates/page/front-page";
+//@import "templates/page/product-archive";
+//@import "templates/page/banner-page";
+//@import "templates/page/product-single";
+//@import "templates/page/checkout";
+//@import "templates/page/account";
+//@import "templates/page/search";
+//@import "templates/page/404";
+//@import "templates/page/zakaz";
+//@import "templates/page/brands";
+
+// Module
+@import "../../../module/Menu/Resources/scss/top-menu";

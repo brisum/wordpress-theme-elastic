@@ -9,10 +9,10 @@
 
     <!-- Favicons
         ================================================== -->
-    <link rel="shortcut icon" href="<?php echo THEME_URI; ?>/assets/src/img/favicon/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" href="<?php echo THEME_URI; ?>/assets/src/img/favicon/favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="<?php echo THEME_URI; ?>/assets/src/img/favicon/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="<?php echo THEME_URI; ?>/assets/src/img/favicon/favicon-128.png" sizes="128x128" />
+    <link rel="shortcut icon" href="<?php echo THEME_URI; ?>/resources/assets/src/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="<?php echo THEME_URI; ?>/resources/assets/src/img/favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="<?php echo THEME_URI; ?>/resources/assets/src/img/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="<?php echo THEME_URI; ?>/resources/assets/src/img/favicon/favicon-128.png" sizes="128x128" />
 
     <!-- Stylesheet
         ================================================== -->
@@ -35,8 +35,60 @@
         })(window,document,'script','dataLayer','GTM-TR54H2G');</script>
     <!-- End Google Tag Manager -->
 
-    <meta property="og:image" content="https://teen-levelup.com/wp-content/themes/teen-levelup/assets/src/img/intro-bg5.jpg" />
+<!--    <meta property="og:image" content="https://teen-levelup.com/wp-content/themes/teen-levelup/assets/src/img/intro-bg5.jpg" />-->
 
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+
+<?php
+
+use Brisum\Lib\ObjectManager;
+use Elastic\Menu\MenuService;
+
+$objectManager = ObjectManager::getInstance();
+/** @var MenuService $menuService */
+$menuService = $objectManager->get('Elastic\Menu\MenuService');
+
+?>
+
+<header>
+    <div class="header-top clearfix">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <?php $menuService->theTopMenu(); ?>
+
+                    <form class="form-inline mt-2 mt-md-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="header-bottom clearfix">
+        <div class="container">
+            <a class="navbar-brand logo" href="<?php echo !is_front_page() ? home_url('/') : '#' ?>">
+                <img src="<?php echo THEME_URI; ?>/resources/assets/src/img/logo.svg?<?php echo THEME_VERSION; ?>"
+                     alt="">
+            </a>
+
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse2" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse2">
+                    <?php $menuService->theNavBar(); ?>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+

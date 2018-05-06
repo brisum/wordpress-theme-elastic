@@ -1,0 +1,22 @@
+#popup-confirm {
+  .modal-dialog {
+    width: 300px;
+  }
+
+  .modal-content button.close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    z-index: 3;
+  }
+
+  .modal-body {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .modal-footer {
+    border-top: none;
+    text-align: center;
+  }
+}

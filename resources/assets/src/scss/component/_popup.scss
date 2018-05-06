@@ -1,0 +1,46 @@
+#popup {
+  .popup-title {
+    margin-bottom: 2rem;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .popup-footer {
+    margin-top: 2rem;
+  }
+
+  .modal-content button.close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    z-index: 3;
+  }
+
+  .modal-body {
+    min-height: 100px;
+  }
+
+  &.loading .modal-body:before {
+    content: ' ';
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 1rem;
+    background-color: white;
+    z-index: 1;
+  }
+  &.loading .modal-body:after {
+    content: ' ';
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("../../img/loader.svg") no-repeat 50% 50%;
+    z-index: 2;
+  }
+}
