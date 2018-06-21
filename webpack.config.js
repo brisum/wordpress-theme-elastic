@@ -60,7 +60,7 @@ class Project {
             self._aliases = {};
 
             let vendor = {
-
+                'slick': __dirname + '/node_modules/slick-carousel/slick/slick.js'
             };
             Object.keys(vendor).forEach(function (alias) {
                 self._aliases[alias] = vendor[alias];
@@ -182,7 +182,12 @@ module.exports = {
         admin_style: './scss/admin/style.scss',
         admin_main: [
             './js/admin/main.js'
-        ]
+        ],
+        slick_style: [
+            __dirname + '/node_modules/slick-carousel/slick/slick.scss',
+            __dirname + '/node_modules/slick-carousel/slick/slick-theme.scss',
+        ],
+        font_awesome: __dirname + '/node_modules/font-awesome/scss/font-awesome.scss'
     },
 
     output: {

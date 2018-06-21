@@ -9209,6 +9209,15 @@ body {
   line-height: 8px;
 }
 
+.slick-slider {
+  font-size: 0;
+}
+
+.slick-slider .slick-slide img {
+  width: 100%;
+  height: auto;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 
@@ -9299,6 +9308,8 @@ header {
 header .navbar {
   margin-left: -15px;
   margin-right: -15px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 header ul.navbar-nav > li:first-child > a.nav-link {
@@ -9314,8 +9325,37 @@ header ul.navbar-nav > li:first-child > a.nav-link {
   color: #fff;
 }
 
+.header-top .search-form {
+  position: relative;
+  width: 300px;
+}
+
+.header-top .search-field {
+  width: 100%;
+  height: 24px;
+  padding: 0 31.5px 0 7.5px;
+  border: none;
+}
+
+.header-top .search-submit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.header-top .search-submit i:before {
+  color: #373a3c;
+  opacity: 0.5;
+}
+
 .header-bottom {
-  padding: 7.5px 0;
+  padding: 15px 0;
 }
 
 .header-bottom .logo {
@@ -9327,6 +9367,22 @@ header ul.navbar-nav > li:first-child > a.nav-link {
 .header-bottom .logo img {
   height: 100%;
   width: auto;
+}
+
+.header-bottom .navbar {
+  font-size: 18px;
+  height: 120px;
+  float: right;
+}
+
+.header-bottom .navbar-light .navbar-nav .nav-link {
+  color: #373a3c;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header-bottom ul.navbar-nav > li:last-child > a.nav-link {
+  padding-right: 0;
 }
 
 .footer {
@@ -9534,5 +9590,18 @@ ul.product-sidebar-menu li {
   background: rgba(248, 249, 250, 0.5);
 }
 
+body.home header {
+  margin-bottom: 0;
+  box-shadow: none;
+  border-bottom: 1px solid #999;
+}
 
-/*# sourceMappingURL=style.css.map?de9cfeb1a1561001d98e1ca8e4dc9857*/
+body.home .slick-wrapper {
+  margin-bottom: 15px;
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #999;
+}
+
+
+/*# sourceMappingURL=style.css.map?bbea46f99178fa8f5e02f215042bc9b2*/

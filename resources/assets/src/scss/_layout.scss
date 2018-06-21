@@ -84,6 +84,8 @@ header {
   .navbar {
     margin-left: -15px;
     margin-right: -15px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   ul.navbar-nav > li:first-child > a.nav-link {
@@ -97,10 +99,37 @@ header {
   .navbar-dark .navbar-nav .nav-link {
     color: $white;
   }
+
+  .search-form {
+    position: relative;
+    width: 300px;
+  }
+  .search-field {
+    width: 100%;
+    height: 24px;
+    padding: 0 ($global-padding/2 + 24px) 0 $global-padding/2;
+    border: none;
+  }
+  .search-submit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    z-index: 1;
+    cursor: pointer;
+
+    i:before {
+      color: $body-color;
+      opacity: 0.5;
+    }
+  }
 }
 
 .header-bottom {
-  padding: $global-padding/2 0;
+  padding: $global-padding 0;
 
   .logo {
     float: left;
@@ -112,19 +141,21 @@ header {
       width: auto;
     }
   }
-}
 
-//.nav-item.action-wrapper {
-//  padding: 0.5rem;
-//  vertical-align: middle;
-//
-//  a.nav-link {
-//    padding: 0;
-//    line-height: 1em;
-//    margin-top: 0.25em;
-//    margin-bottom: 0.25em;
-//  }
-//}
+  .navbar {
+    font-size: 18px;
+    height: 120px;
+    float: right;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    color: $body-color;
+    padding-left: $global-padding;
+    padding-right: $global-padding;
+  }
+  ul.navbar-nav > li:last-child > a.nav-link {
+    padding-right:  0;
+  }
+}
 
 .footer {
   position: absolute;

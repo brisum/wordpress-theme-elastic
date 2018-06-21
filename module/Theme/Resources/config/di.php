@@ -16,7 +16,7 @@ return [
                     'value' => 'Brisum\Wordpress\PostType\Slider\VisualComponent\DataProvider\MainSliderDataProvider'
                 ],
                 'template' => [
-                    'value' => "vendor/brisum/wordpress-module-post-type-slider/src/VisualComponent/Skin/FoundationOrbit/template.php"
+                    'value' => "vendor/brisum/wordpress-module-post-type-slider/src/VisualComponent/Skin/Slick/template.tpl.php"
                 ]
             ]
         ],

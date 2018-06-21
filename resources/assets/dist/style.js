@@ -61,12 +61,12 @@ var style =
 /******/ 	__webpack_require__.p = "/wp-content/themes/elastic/resources/assets/dist/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 5:
+/***/ 6:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -74,4 +74,4 @@ var style =
 /***/ })
 
 /******/ });
-//# sourceMappingURL=style.js.map?9f4f7dc66cf8ee4f7539
+//# sourceMappingURL=style.js.map?02d7a47c3112d3f7e6e2

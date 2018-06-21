@@ -30,7 +30,7 @@ var main =
 /******/
 /******/ 	// objects to store loaded and loading chunks
 /******/ 	var installedChunks = {
-/******/ 		1: 0
+/******/ 		3: 0
 /******/ 	};
 /******/
 /******/ 	// The require function
@@ -87,7 +87,7 @@ var main =
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "js/chunk/" + ({"0":"common-height.widget"}[chunkId]||chunkId) + "." + chunkId + ".js?" + {"0":"e5371421c942273b7029"}[chunkId] + "";
+/******/ 		script.src = __webpack_require__.p + "js/chunk/" + ({"0":"slick","1":"slick.widget","2":"common-height.widget"}[chunkId]||chunkId) + "." + chunkId + ".js?" + {"0":"f090d876925cf6d805bc","1":"255c8bd1634694765649","2":"1647c60334dfc799d4d4"}[chunkId] + "";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {
@@ -143,7 +143,7 @@ var main =
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -387,24 +387,32 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                                 break;
                             */
 
-                            case 'lib-bundle-loader':
-                                BundleLoader.load([__webpack_require__(10)], callback);
+                            case 'slick':
+                                BundleLoader.load([__webpack_require__(5)], callback);
                                 break;
 
-                            case 'lib-require-init':
+                            case 'lib-bundle-loader':
                                 BundleLoader.load([__webpack_require__(11)], callback);
                                 break;
 
-                            case 'lib-source-loader':
+                            case 'lib-require-init':
                                 BundleLoader.load([__webpack_require__(12)], callback);
                                 break;
 
-                            case 'lib-widget':
+                            case 'lib-source-loader':
                                 BundleLoader.load([__webpack_require__(13)], callback);
                                 break;
 
-                            case 'common-height.widget':
+                            case 'lib-widget':
                                 BundleLoader.load([__webpack_require__(14)], callback);
+                                break;
+
+                            case 'common-height.widget':
+                                BundleLoader.load([__webpack_require__(15)], callback);
+                                break;
+
+                            case 'slick.widget':
+                                BundleLoader.load([__webpack_require__(16)], callback);
                                 break;
 
                             default:
@@ -423,17 +431,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
 /***/ }),
-/* 5 */,
-/* 6 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(7);
+var cbs = [], 
+	data;
+module.exports = function(cb) {
+	if(cbs) cbs.push(cb);
+	else cb(data);
+}
+__webpack_require__.e/* require.ensure */(0).then((function(require) {
+	data = __webpack_require__(24);
+	var callbacks = cbs;
+	cbs = null;
+	for(var i = 0, l = callbacks.length; i < l; i++) {
+		callbacks[i](data);
+	}
+}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+
+/***/ }),
+/* 6 */,
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
 __webpack_require__(8);
-module.exports = __webpack_require__(9);
+__webpack_require__(9);
+module.exports = __webpack_require__(10);
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -487,7 +514,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 });
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -668,7 +695,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 });
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -692,7 +719,7 @@ window['$'] = $;
 })(jQuery);
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var cbs = [], 
@@ -711,7 +738,7 @@ new Promise(function(resolve) { resolve(); }).then((function(require) {
 }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var cbs = [], 
@@ -730,7 +757,7 @@ new Promise(function(resolve) { resolve(); }).then((function(require) {
 }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var cbs = [], 
@@ -749,7 +776,7 @@ new Promise(function(resolve) { resolve(); }).then((function(require) {
 }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var cbs = [], 
@@ -768,7 +795,7 @@ new Promise(function(resolve) { resolve(); }).then((function(require) {
 }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var cbs = [], 
@@ -777,8 +804,27 @@ module.exports = function(cb) {
 	if(cbs) cbs.push(cb);
 	else cb(data);
 }
-__webpack_require__.e/* require.ensure */(0).then((function(require) {
-	data = __webpack_require__(18);
+__webpack_require__.e/* require.ensure */(2).then((function(require) {
+	data = __webpack_require__(25);
+	var callbacks = cbs;
+	cbs = null;
+	for(var i = 0, l = callbacks.length; i < l; i++) {
+		callbacks[i](data);
+	}
+}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var cbs = [], 
+	data;
+module.exports = function(cb) {
+	if(cbs) cbs.push(cb);
+	else cb(data);
+}
+__webpack_require__.e/* require.ensure */(1).then((function(require) {
+	data = __webpack_require__(26);
 	var callbacks = cbs;
 	cbs = null;
 	for(var i = 0, l = callbacks.length; i < l; i++) {
@@ -788,4 +834,4 @@ __webpack_require__.e/* require.ensure */(0).then((function(require) {
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=main.js.map?cf7e44f8cded2b8c10c6
+//# sourceMappingURL=main.js.map?1fc393ffd980739e5cfc

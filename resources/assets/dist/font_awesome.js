@@ -1,4 +1,4 @@
-var admin_style =
+var font_awesome =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -61,12 +61,12 @@ var admin_style =
 /******/ 	__webpack_require__.p = "/wp-content/themes/elastic/resources/assets/dist/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 17);
+/******/ 	return __webpack_require__(__webpack_require__.s = 23);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 17:
+/***/ 23:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -74,4 +74,4 @@ var admin_style =
 /***/ })
 
 /******/ });
-//# sourceMappingURL=admin_style.js.map?e2387d2409f5da4ea149
+//# sourceMappingURL=font_awesome.js.map?161cf10e8fb02fa97b08

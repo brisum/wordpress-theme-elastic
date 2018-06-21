@@ -16,8 +16,7 @@ function module_assets_admin_enqueue_scripts()
         'jquery',
         'Theme',
         [
-            'ASSETS_VERSION' => THEME_VERSION,
-            'ORDER_MIN_SUMMARY' => ORDER_MIN_SUMMARY,
+            'THEME_VERSION' => THEME_VERSION,
             'currency' => 'руб.',
             'url' => [
                 'theme' => THEME_URI,

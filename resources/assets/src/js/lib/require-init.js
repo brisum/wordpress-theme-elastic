@@ -50,6 +50,11 @@ function($,        BundleLoader) {
                         */
 
                         
+                        case 'slick':
+                            BundleLoader.load([require('bundle-loader?&name=slick!slick')], callback);
+                            break;
+                        
+
                         case 'lib-bundle-loader':
                             BundleLoader.load([require('bundle-loader?&name=lib-bundle-loader!lib-bundle-loader')], callback);
                             break;
@@ -72,6 +77,11 @@ function($,        BundleLoader) {
 
                         case 'common-height.widget':
                             BundleLoader.load([require('bundle-loader?&name=common-height.widget!common-height.widget')], callback);
+                            break;
+                        
+
+                        case 'slick.widget':
+                            BundleLoader.load([require('bundle-loader?&name=slick.widget!slick.widget')], callback);
                             break;
                         
 

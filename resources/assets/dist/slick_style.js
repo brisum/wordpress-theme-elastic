@@ -1,4 +1,4 @@
-var admin_style =
+var slick_style =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -61,12 +61,28 @@ var admin_style =
 /******/ 	__webpack_require__.p = "/wp-content/themes/elastic/resources/assets/dist/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 17);
+/******/ 	return __webpack_require__(__webpack_require__.s = 20);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 17:
+/***/ 20:
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(21);
+module.exports = __webpack_require__(22);
+
+
+/***/ }),
+
+/***/ 21:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 22:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -74,4 +90,4 @@ var admin_style =
 /***/ })
 
 /******/ });
-//# sourceMappingURL=admin_style.js.map?e2387d2409f5da4ea149
+//# sourceMappingURL=slick_style.js.map?239fde80802410cce3ec

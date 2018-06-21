@@ -1,19 +1,33 @@
 {
+  "slick": {
+    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/slick.0.js?f090d876925cf6d805bc"
+  },
+  "slick.widget": {
+    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/slick.widget.1.js?255c8bd1634694765649"
+  },
   "common-height.widget": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/common-height.widget.0.js?e5371421c942273b7029"
+    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/common-height.widget.2.js?1647c60334dfc799d4d4"
   },
   "main": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/main.js?cf7e44f8cded2b8c10c6"
+    "js": "/wp-content/themes/elastic/resources/assets/dist/main.js?1fc393ffd980739e5cfc"
+  },
+  "slick_style": {
+    "js": "/wp-content/themes/elastic/resources/assets/dist/slick_style.js?239fde80802410cce3ec",
+    "css": "/wp-content/themes/elastic/resources/assets/dist/slick_style.css?3cc91d8cf646497634384451bb4ad932"
   },
   "admin_main": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/admin_main.js?eeddd6bcd0740efac7ca"
+    "js": "/wp-content/themes/elastic/resources/assets/dist/admin_main.js?b229021deda7373c3742"
   },
   "style": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/style.js?9f4f7dc66cf8ee4f7539",
-    "css": "/wp-content/themes/elastic/resources/assets/dist/style.css?de9cfeb1a1561001d98e1ca8e4dc9857"
+    "js": "/wp-content/themes/elastic/resources/assets/dist/style.js?02d7a47c3112d3f7e6e2",
+    "css": "/wp-content/themes/elastic/resources/assets/dist/style.css?bbea46f99178fa8f5e02f215042bc9b2"
   },
   "admin_style": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/admin_style.js?faf1bc5e5d5a033a615d",
+    "js": "/wp-content/themes/elastic/resources/assets/dist/admin_style.js?e2387d2409f5da4ea149",
     "css": "/wp-content/themes/elastic/resources/assets/dist/admin_style.css?d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "font_awesome": {
+    "js": "/wp-content/themes/elastic/resources/assets/dist/font_awesome.js?161cf10e8fb02fa97b08",
+    "css": "/wp-content/themes/elastic/resources/assets/dist/font_awesome.css?359a568f2cdab59737b919eda429bf22"
   }
 }

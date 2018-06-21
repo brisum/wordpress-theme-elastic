@@ -1,0 +1,14 @@
+body.home {
+  header {
+    margin-bottom: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #999;
+  }
+
+  .slick-wrapper{
+    margin-bottom: $global-margin;
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+  }
+}
