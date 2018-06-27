@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c9e9e1fd079f2db38d707736a6e3fa36",
+    "content-hash": "b827458659d0a890e882212d99b0d836",
     "packages": [
         {
             "name": "brisum/lib-array-storage",
@@ -1047,6 +1047,44 @@
                 "wordpress"
             ],
             "time": "2017-11-30T22:12:31+00:00"
+        },
+        {
+            "name": "brisum/wordpress-module-theme-options",
+            "version": "0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/brisum/wordpress-module-theme-options.git",
+                "reference": "dd4050f2db1f402d9976bfcb51236c7b5342cb7e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brisum/wordpress-module-theme-options/zipball/dd4050f2db1f402d9976bfcb51236c7b5342cb7e",
+                "reference": "dd4050f2db1f402d9976bfcb51236c7b5342cb7e",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Brisum\\Wordpress\\ThemeOptions\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oleksandr Manchenko",
+                    "email": "omanchenko@brisum.com",
+                    "homepage": "http://brisum.com"
+                }
+            ],
+            "description": "Wordpress module theme options",
+            "homepage": "https://github.com/brisum/wordpress-module-theme-options",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2017-12-01T15:29:33+00:00"
         },
         {
             "name": "brisum/wordpress-plugin-query-monitor",

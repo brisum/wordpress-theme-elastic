@@ -21,7 +21,7 @@
     "brisum/wordpress-module-breadcrumbs": "dev-master",
     "brisum/wordpress-module-form-popup": "dev-master",
     "brisum/wordpress-module-image-editor": "dev-master",
-    "brisum/wordpress-module-menu": "dev-master",
+    "brisum/wordpressBreadcrumbsInterface-module-menu": "dev-master",
     "brisum/wordpress-module-optimization": "dev-master",
     "brisum/wordpress-module-post-hierarchy": "dev-master",
     "brisum/wordpress-module-post-panel": "dev-master",
@@ -32,7 +32,8 @@
     "brisum/wordpress-module-seo-data": "dev-master",
     "brisum/wordpress-module-theme": "dev-master",
     "brisum/lib-visual-component": "^0.1.0",
-    "brisum/wordpress-plugin-query-monitor": "^0.1.0"
+    "brisum/wordpress-plugin-query-monitor": "^0.1.0",
+    "brisum/wordpress-module-theme-options": "^0.2.1"
   },
   "autoload": {
     "psr-4": {

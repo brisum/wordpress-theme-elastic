@@ -1,0 +1,44 @@
+.woocommerce .product-list div.product {
+  margin-bottom: $global-margin * 2;
+}
+
+.product-list {
+  .product {
+    margin-bottom: $global-margin;
+    border: 1px solid $gray-primary;
+
+    &.img-dummy {
+      border: 1px solid $light-gray-primary;
+    }
+
+    > a.image-wrapper {
+      display: inline-block;
+      padding: $global-padding / 2;
+    }
+
+    .info-wrapper {
+      width: 100%;
+      background: $light-gray-primary;
+
+      .name {
+        display: table;
+        width: 100%;
+        height: 90px;
+        max-height: 90px;
+        overflow: hidden;
+        padding: $global-padding / 2;
+
+        a {
+          display: table-cell;
+          margin: 0;
+          vertical-align: middle;
+          text-align: center;
+        }
+      }
+    }
+    .price-wrapper {
+      padding: 0 $global-padding/2 $global-padding/2;
+    }
+  }
+}
+

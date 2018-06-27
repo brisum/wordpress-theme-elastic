@@ -1,4 +1,15 @@
 <?php
+
+global $wp_query;
+
+$wp_query->set_404();
+status_header( 404 );
+get_template_part( 404 );
+
+?>
+
+
+<?php
 /**
  * The main template file
  *
@@ -13,7 +24,7 @@
  * @subpackage Twenty_Seventeen
  * @since 1.0
  * @version 1.0
- */
+ * /
 
 get_header(); ?>
 
@@ -34,14 +45,14 @@ get_header(); ?>
 			<?php
 			if ( have_posts() ) :
 
-				/* Start the Loop */
+				/* Start the Loop * /
 				while ( have_posts() ) : the_post();
 
 					/*
 					 * Include the Post-Format-specific template for the content.
 					 * If you want to override this in a child theme, then include a file
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
+					 * /
 					get_template_part( 'template-parts/post/content', get_post_format() );
 
 				endwhile;
@@ -65,3 +76,5 @@ get_header(); ?>
 </div><!-- .wrap -->
 
 <?php get_footer();
+
+ */

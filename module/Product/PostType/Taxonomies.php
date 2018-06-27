@@ -3,11 +3,12 @@
 namespace Elastic\Product\PostType;
 
 use Brisum\Wordpress\PostType\Taxonomies as BaseTaxonomies;
-use Elastic\Product\ProductCategoryService;
 
 class Taxonomies extends BaseTaxonomies
 {
-	/**
+    const TAXONOMY_PRODUCT_SALE = 'product_sale';
+
+    /**
 	 * @var string
 	 */
 	protected $postType = Product::POST_TYPE;
@@ -16,21 +17,18 @@ class Taxonomies extends BaseTaxonomies
 	 * @var array
 	 */
 	protected  $taxonomies = [
-        ProductCategoryService::TAXONOMY_PRODUCT_CATEGORY => [
-			'label' => 'Категория товара',
+        self::TAXONOMY_PRODUCT_SALE => [
+			'label' => 'Акции',
 			'show_ui' => true,
 			'show_in_menu' => true,
 			'show_in_nav_menus' => true,
 			'show_admin_column' => true,
-			'hierarchical' => true,
-            'rewrite' => [
-                'slug' => 'product'
-            ]
+			'hierarchical' => false
 		]
 	];
 
-	public function filterProductCategoryRewriteRules($rewriteRules)
+	public function filterProductSaleRewriteRules($rewriteRules)
 	{
-		return $rewriteRules;
+		return [];
 	}
 }

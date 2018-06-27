@@ -61,12 +61,12 @@ var admin_style =
 /******/ 	__webpack_require__.p = "/wp-content/themes/elastic/resources/assets/dist/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 17);
+/******/ 	return __webpack_require__(__webpack_require__.s = 31);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 17:
+/***/ 31:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -74,4 +74,4 @@ var admin_style =
 /***/ })
 
 /******/ });
-//# sourceMappingURL=admin_style.js.map?e2387d2409f5da4ea149
+//# sourceMappingURL=admin_style.js.map?6b24a57f1f38223a598f

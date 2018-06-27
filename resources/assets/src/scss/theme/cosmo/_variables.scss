@@ -6,7 +6,9 @@
 //
 $blue-primary: #67809f;
 $red-primary: #ef4136;
-$red-green: #2B8601; // Matching Gradient
+$green-primary: #2B8601; // Matching Gradient
+$light-gray-primary: #f7f7f7;
+$gray-primary: darken($light-gray-primary, 10%);
 
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;

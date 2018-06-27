@@ -17,6 +17,9 @@ function load_theme_scripts() {
     wp_register_script('jquery', THEME_URI . '/resources/assets/dist/jquery.js', [], THEME_VERSION, true);
 	wp_enqueue_script('jquery');
 
+    wp_register_script('bootstrap', THEME_URI . '/resources/assets/dist/bootstrap.js', ['jquery'], THEME_VERSION, true);
+	wp_enqueue_script('bootstrap');
+
     wp_enqueue_script('theme', $assets['main']['js'], ['jquery'], THEME_VERSION, true);
     wp_localize_script(
         'theme',

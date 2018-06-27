@@ -1,7 +1,17 @@
-#popup {
+#popup,
+#popup-question {
+  .modal-title {
+    font-size: 1.5em;
+    line-height: 1;
+    font-weight: 500;
+  }
+
   .popup-title {
-    margin-bottom: 2rem;
-    font-size: 16px;
+    margin: 0 (-1 * $global-margin) $global-margin;
+    padding: 0 $global-padding $global-padding $global-padding;
+    border-bottom: 1px solid $underline-border-color;
+    font-size: 1.5em;
+    line-height: 1;
     font-weight: 500;
   }
 

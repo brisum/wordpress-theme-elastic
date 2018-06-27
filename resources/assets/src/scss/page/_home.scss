@@ -11,4 +11,14 @@ body.home {
     -moz-box-shadow: 0 8px 6px -6px #999;
     box-shadow: 0 8px 6px -6px #999;
   }
+
+  .product-category-grid {
+    margin-bottom: $global-margin * 2;
+  }
+
+  .main-content {
+    h1 {
+      margin-bottom: $global-margin;
+    }
+  }
 }

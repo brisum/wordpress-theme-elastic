@@ -55,6 +55,11 @@ function($,        BundleLoader) {
                             break;
                         
 
+                        case 'magnific_popup':
+                            BundleLoader.load([require('bundle-loader?&name=magnific_popup!magnific_popup')], callback);
+                            break;
+                        
+
                         case 'lib-bundle-loader':
                             BundleLoader.load([require('bundle-loader?&name=lib-bundle-loader!lib-bundle-loader')], callback);
                             break;
@@ -75,13 +80,78 @@ function($,        BundleLoader) {
                             break;
                         
 
+                        case 'Popup':
+                            BundleLoader.load([require('bundle-loader?&name=Popup!Popup')], callback);
+                            break;
+                        
+
+                        case 'PopupBootstrap':
+                            BundleLoader.load([require('bundle-loader?&name=PopupBootstrap!PopupBootstrap')], callback);
+                            break;
+                        
+
+                        case 'PopupConfirm':
+                            BundleLoader.load([require('bundle-loader?&name=PopupConfirm!PopupConfirm')], callback);
+                            break;
+                        
+
+                        case 'astute-form.widget':
+                            BundleLoader.load([require('bundle-loader?&name=astute-form.widget!astute-form.widget')], callback);
+                            break;
+                        
+
+                        case 'button-confirmation.widget':
+                            BundleLoader.load([require('bundle-loader?&name=button-confirmation.widget!button-confirmation.widget')], callback);
+                            break;
+                        
+
                         case 'common-height.widget':
                             BundleLoader.load([require('bundle-loader?&name=common-height.widget!common-height.widget')], callback);
                             break;
                         
 
+                        case 'div-table.widget':
+                            BundleLoader.load([require('bundle-loader?&name=div-table.widget!div-table.widget')], callback);
+                            break;
+                        
+
+                        case 'form-confirmation.widget':
+                            BundleLoader.load([require('bundle-loader?&name=form-confirmation.widget!form-confirmation.widget')], callback);
+                            break;
+                        
+
+                        case 'magnific-popup.widget':
+                            BundleLoader.load([require('bundle-loader?&name=magnific-popup.widget!magnific-popup.widget')], callback);
+                            break;
+                        
+
+                        case 'popup-confirm.widget':
+                            BundleLoader.load([require('bundle-loader?&name=popup-confirm.widget!popup-confirm.widget')], callback);
+                            break;
+                        
+
+                        case 'popup-content.widget':
+                            BundleLoader.load([require('bundle-loader?&name=popup-content.widget!popup-content.widget')], callback);
+                            break;
+                        
+
+                        case 'popup.widget':
+                            BundleLoader.load([require('bundle-loader?&name=popup.widget!popup.widget')], callback);
+                            break;
+                        
+
                         case 'slick.widget':
                             BundleLoader.load([require('bundle-loader?&name=slick.widget!slick.widget')], callback);
+                            break;
+                        
+
+                        case 'checkout-one-click.widget':
+                            BundleLoader.load([require('bundle-loader?&name=checkout-one-click.widget!checkout-one-click.widget')], callback);
+                            break;
+                        
+
+                        case 'viewed-products.widget':
+                            BundleLoader.load([require('bundle-loader?&name=viewed-products.widget!viewed-products.widget')], callback);
                             break;
                         
 

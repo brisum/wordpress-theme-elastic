@@ -1,3 +1,3 @@
 <?php
 
-!defined('THEME_VERSION') && define('THEME_VERSION', '20180506');
+!defined('THEME_VERSION') && define('THEME_VERSION', '20180802');

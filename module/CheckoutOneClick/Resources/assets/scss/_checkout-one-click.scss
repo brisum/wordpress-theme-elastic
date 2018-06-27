@@ -1,0 +1,21 @@
+#popup[data-name="checkout-one-click"] .modal-dialog {
+  width: 450px;
+}
+
+form#checkout-one-click {
+  width: 100%;
+  max-width: 100%;
+
+  .detail {
+    margin-bottom: 1rem;
+  }
+
+  p.error-message {
+    margin-bottom: 0;
+  }
+
+  .form-group:last-child,
+  .alert.alert-success {
+    margin-bottom: 0;
+  }
+}

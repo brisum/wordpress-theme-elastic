@@ -19,23 +19,32 @@ $load = [
     // vendor
     THEME_DIR . 'vendor/brisum/wordpress-module-theme/src/init.php',
     THEME_DIR . 'vendor/brisum/wordpress-module-custom-field/src/init.php',
-    THEME_DIR . 'vendor/brisum/wordpress-module-post-type-slider/src/init.php',
+    THEME_DIR . 'vendor/brisum/wordpress-module-image-editor/src/init.php',
     THEME_DIR . 'vendor/brisum/wordpress-plugin-query-monitor/src/init.php',
+
+    THEME_DIR . 'vendor/brisum/wordpress-module-post-type-page/src/init.php',
+    THEME_DIR . 'vendor/brisum/wordpress-module-post-type-slider/src/init.php',
 
     // constants
     THEME_DIR . 'module/Resources/constant.php',
 
     // module
+    THEME_DIR . 'module/CheckoutOneClick/init.php',
+    THEME_DIR . 'module/Form/init.php',
+    THEME_DIR . 'module/Mail/init.php',
     THEME_DIR . 'module/Menu/init.php',
     THEME_DIR . 'module/Product/init.php',
     THEME_DIR . 'module/Resources/init.php',
+    THEME_DIR . 'module/Theme/init.php',
+    THEME_DIR . 'module/ViewedProducts/init.php',
+    THEME_DIR . 'module/Woocommerce/init.php',
 ];
 
 $loadAdmin = [
     // vendor
+     THEME_DIR . 'vendor/brisum/wordpress-module-theme-options/src/init-admin.php'
 
     // module
-    // THEME_DIR . 'module/ThemeOptions/init-admin.php'
 ];
 
 foreach ($load as $file) {

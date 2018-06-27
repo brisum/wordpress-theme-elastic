@@ -1,4 +1,15 @@
 <?php
+
+global $wp_query;
+
+$wp_query->set_404();
+status_header( 404 );
+get_template_part( 404 );
+
+?>
+
+
+<?php
 /**
  * The template for displaying all single posts
  *
@@ -8,7 +19,7 @@
  * @subpackage Twenty_Seventeen
  * @since 1.0
  * @version 1.0
- */
+ * /
 
 get_header(); ?>
 
@@ -17,7 +28,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php
-			/* Start the Loop */
+			/* Start the Loop * /
 			while ( have_posts() ) : the_post();
 
 				get_template_part( 'template-parts/post/content', get_post_format() );
@@ -41,3 +52,5 @@ get_header(); ?>
 </div><!-- .wrap -->
 
 <?php get_footer();
+
+*/

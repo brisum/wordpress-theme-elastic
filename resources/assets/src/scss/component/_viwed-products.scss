@@ -1,0 +1,27 @@
+.viewed-products {
+  margin-top: $global-margin * 2;
+
+  .viewed-products-title {
+    font-size: 2em;
+    font-weight: 500;
+    margin-bottom: $global-margin;
+  }
+
+  .slick-slider .slick-arrow.slick-prev {
+    left: 0;
+  }
+  .slick-slider .slick-arrow.slick-next {
+    right: 0;
+  }
+
+  .slick-slide {
+    .col-xs-12,
+    .col-md-4 {
+      max-width: none;
+    }
+
+    .product {
+      font-size: $font-size-base;
+    }
+  }
+}

@@ -27,6 +27,7 @@ function($,        Widget,       SourceLoader,        BundleLoader,        Requi
             arrows: false,
             draggable: true,
             speed: 300,
+            autoplay: true,
             autoplaySpeed: 6000,
             slidesToShow: 1,
             slidesToScroll: 1,

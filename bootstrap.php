@@ -6,7 +6,9 @@ $autoload = require(dirname(__FILE__) . '/vendor/autoload.php');
 
 global $wpdb;
 $configList = [
-    include __DIR__ . '/vendor/brisum/wordpress-module-breadcrumbs/src/etc/di.php',
+    include __DIR__ . '/vendor/brisum/wordpress-module-breadcrumbs/src/Resources/config/di.php',
+    include __DIR__ . '/module/Form/Question/Resources/config/di.php',
+    include __DIR__ . '/module/Form/Contact/Resources/config/di.php',
     include __DIR__ . '/module/Product/Resources/config/di.php',
     include __DIR__ . '/module/Theme/Resources/config/di.php',
 ];

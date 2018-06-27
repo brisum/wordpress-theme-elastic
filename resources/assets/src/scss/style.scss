@@ -5,26 +5,32 @@
 $global-margin: $grid-gutter-width / 2;
 $global-padding: $grid-gutter-width / 2;
 
-$color-green: #0E9A49;
-$color-red: #e74c3c;
-$color-blue: #2575dc;
-$color-orange: #FFA14F;
+//$color-green: #0E9A49;
+//$color-red: #e74c3c;
+//$color-blue: #2575dc;
+//$color-orange: #FFA14F;
+
+$underline-border-color: $gray-primary;
 
 @import "../../../../vendor/brisum/wordpress-module-post-type-slider/src/VisualComponent/Skin/Slick/assets/scss/slick";
+@import "../../../../vendor/brisum/lib-form/src/Resources/assets/scss/style";
 
 @import "layout";
 
 @import "component/div-table";
-//@import "component/loader";
-//@import "component/popup";
+@import "component/loader";
+@import "component/popup";
 //@import "component/popup-confirm";
+@import "component/viwed-products";
 
 @import "../../../../module/Menu/Resources/scss/top-menu";
 
 @import "../../../../module/Product/Resources/assets/scss/product-sidebar-menu";
-@import "../../../../module/Product/Resources/assets/scss/product-category-grid";
+@import "../../../../module/CheckoutOneClick/Resources/assets/scss/checkout-one-click";
 
 @import "page/home";
-
-
-
+@import "page/product-category-grid";
+@import "page/product-list";
+@import "page/product";
+@import "page/page-price-list";
+@import "page/page-kontakty";

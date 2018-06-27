@@ -60,7 +60,8 @@ class Project {
             self._aliases = {};
 
             let vendor = {
-                'slick': __dirname + '/node_modules/slick-carousel/slick/slick.js'
+                'slick': __dirname + '/node_modules/slick-carousel/slick/slick.js',
+                'magnific_popup': __dirname + '/node_modules/magnific-popup/dist/jquery.magnific-popup.js'
             };
             Object.keys(vendor).forEach(function (alias) {
                 self._aliases[alias] = vendor[alias];
@@ -69,6 +70,12 @@ class Project {
             let libBasePath =  __dirname + '/resources/assets/src/js/lib/';
             glob.sync(libBasePath + '**/*.js').forEach(function (path) {
                 let alias = 'lib-' + Project.generateAliasName(path, libBasePath);
+                self._aliases[alias] = path;
+            });
+
+            let moduleBasePath =  __dirname + '/resources/assets/src/js/module/';
+            glob.sync(moduleBasePath + '**/*.js').forEach(function (path) {
+                let alias = Project.generateAliasName(path, moduleBasePath);
                 self._aliases[alias] = path;
             });
 
@@ -102,10 +109,6 @@ class Project {
         return filePath
             .replace(basePath, '')
             .replace(/\//g, '-')
-            // .replace(
-            //     /([a-z0-9-])([A-Z])/g,
-            //     function (_, char1, char2) { return ('-' !== char1 ? char1 : '') + '-' + char2.toLowerCase(); }
-            // )
             .replace(/\.[^\.]+$/, '');
     }
 
@@ -174,8 +177,8 @@ module.exports = {
         style: './scss/style.scss',
         main: [
             // Vendor scripts
-            __dirname + '/vendor/brisum/lib-form/src/Resources/js/jquery.serializeJSON.js',
-            __dirname + '/vendor/brisum/lib-form/src/Resources/js/jquery.brisum.astute-form.js',
+            __dirname + '/vendor/brisum/lib-form/src/Resources/assets/js/jquery.serializeJSON.js',
+            __dirname + '/vendor/brisum/lib-form/src/Resources/assets/js/jquery.brisum.astute-form.js',
 
             './js/main.js'
         ],
@@ -186,6 +189,9 @@ module.exports = {
         slick_style: [
             __dirname + '/node_modules/slick-carousel/slick/slick.scss',
             __dirname + '/node_modules/slick-carousel/slick/slick-theme.scss',
+        ],
+        magnific_popup_style: [
+            __dirname + '/node_modules/magnific-popup/src/css/main.scss'
         ],
         font_awesome: __dirname + '/node_modules/font-awesome/scss/font-awesome.scss'
     },

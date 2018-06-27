@@ -39,15 +39,18 @@
 
     <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?> id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body <?php body_class(); ?>>
 
 
 <?php
 
 use Brisum\Lib\ObjectManager;
 use Elastic\Menu\MenuService;
+use Elastic\Theme\ThemeService;
 
 $objectManager = ObjectManager::getInstance();
+/** @var ThemeService $themeService */
+$themeService = $objectManager->get('Elastic\Theme\ThemeService');
 /** @var MenuService $menuService */
 $menuService = $objectManager->get('Elastic\Menu\MenuService');
 
@@ -55,18 +58,18 @@ $menuService = $objectManager->get('Elastic\Menu\MenuService');
 
 <header>
     <div class="header-top clearfix">
-        <div class="container">
-            <nav class="navbar navbar-expand-md navbar-dark">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <div class="container clearfix">
+            <span class="phones">
+                <i class="fa fa-mobile" aria-hidden="true"></i>
+                <?php echo implode(', ', $themeService->getPhones()); ?>
+            </span>
 
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <?php $menuService->theTopMenu(); ?>
+            <span class="email">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <?php echo $themeService->getEmail(); ?>
+            </span>
 
-                    <?php get_search_form(true); ?>
-                </div>
-            </nav>
+            <?php get_search_form(true); ?>
         </div>
     </div>
     <div class="header-bottom clearfix">
@@ -75,6 +78,10 @@ $menuService = $objectManager->get('Elastic\Menu\MenuService');
                 <img src="<?php echo THEME_URI; ?>/resources/assets/src/img/logo.svg?<?php echo THEME_VERSION; ?>"
                      alt="">
             </a>
+
+            <button type="button" class="btn btn-success toogle-popup-question" data-toggle="modal" data-target="#popup-question">
+                Задать вопрос
+            </button>
 
             <nav class="navbar navbar-expand-lg navbar-light">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse2" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,3 +96,10 @@ $menuService = $objectManager->get('Elastic\Menu\MenuService');
     </div>
 </header>
 
+<?php if (!is_home() && !is_front_page()) : ?>
+    <div class="container">
+        <div class="breadcrumbs-wrapper">
+            <?php $objectManager->get('Brisum\Wordpress\Breadcrumbs\VisualComponent\Breadcrumbs')->render(); ?>
+        </div>
+    </div>
+<?php endif; ?>
