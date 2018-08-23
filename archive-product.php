@@ -6,7 +6,15 @@ use Brisum\Lib\ObjectManager;
 use Elastic\Product\ProductCategoryService;
 
 $objectManager = ObjectManager::getInstance();
-$hasCategory = get_query_var(ProductCategoryService::TAXONOMY_PRODUCT_CATEGORY);
+/** @var ProductCategoryService $productCategoryService */
+$productCategoryService = $objectManager->get('Elastic\Product\ProductCategoryService');
+$categorySlug = get_query_var(ProductCategoryService::TAXONOMY_PRODUCT_CATEGORY);
+$category = $categorySlug
+    ? get_term_by('slug', $categorySlug, ProductCategoryService::TAXONOMY_PRODUCT_CATEGORY)
+    : null;
+$gridCategories = $category
+    ? $productCategoryService->getSubCategories($category)
+    : $productCategoryService->getTopCategories();
 
 ?>
 
@@ -16,13 +24,17 @@ $hasCategory = get_query_var(ProductCategoryService::TAXONOMY_PRODUCT_CATEGORY);
             <?php $objectManager->create('Elastic\Product\VisualComponent\ProductCategorySidebarMenu')->render(); ?>
         </div>
         <div class="col-xs-12 col-md-9">
-            <?php if ($hasCategory) : ?>
-                <?php get_template_part('template-parts/product/product-list'); ?>
-            <?php else : ?>
-                <h1>
-                    Товары
-                </h1>
+            <?php if (!$category) : ?>
+                <h1>Товары</h1>
                 <?php get_template_part('template-parts/product/product-category-grid'); ?>
+            <?php elseif ($gridCategories) : ?>
+                <h1><?php echo $category ? $category->name : 'Товары'; ?></h1>
+                <?php get_template_part('template-parts/product/product-category-grid'); ?>
+            <?php else : ?>
+                <h1><?php echo $category ? $category->name : 'Товары'; ?></h1>
+                <div class="row content product-list">
+                    <?php get_template_part('template-parts/product/product-list-loop'); ?>
+                </div>
             <?php endif; ?>
         </div>
     </div>

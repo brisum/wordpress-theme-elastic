@@ -3,15 +3,15 @@
 use Brisum\Lib\ObjectManager;
 use Elastic\Product\ProductCategoryService;
 
+global $gridCategories;
 /** @var ProductCategoryService $productCategoryService */
 $productCategoryService = ObjectManager::getInstance()->get('Elastic\Product\ProductCategoryService');
-$categories = $productCategoryService->getTopCategories();
 $col = is_home() || is_front_page() ? 'col-12 col-md-3' : 'col-12 col-md-4';
 
 ?>
 
 <div class="row product-category-grid">
-    <?php foreach ($categories as $category) : ?>
+    <?php foreach ($gridCategories as $category) : ?>
         <?php
         $link = get_term_link($category, ProductCategoryService::TAXONOMY_PRODUCT_CATEGORY);
         $image = $productCategoryService->getImage($category);

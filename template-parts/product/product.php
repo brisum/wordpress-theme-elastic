@@ -14,8 +14,6 @@ $price = $product->get_price();
 $attributes = $product->get_attributes();
 $videoList = $ptProduct->getVideoList();
 
-
-$product->get_gallery_image_ids();
 ?>
 
 <h1>
@@ -27,8 +25,10 @@ $product->get_gallery_image_ids();
         <div class="images-block">
             <div class="row">
                 <?php if ($isSingleImage) : ?>
-                    <div class="col-xs-12">
-
+                    <div class="col-12 col-md-6">
+                        <div class="preview">
+                            <img class="img-fluid" src="<?php echo reset($images)['full']; ?>">
+                        </div>
                     </div>
                 <?php else : ?>
                     <div class="col-12 col-md-6">
@@ -150,7 +150,7 @@ $product->get_gallery_image_ids();
                              id="video" role="tabpanel" aria-labelledby="video-tab">
                             <div class="row">
                                 <?php foreach ($videoList as $video) : ?>
-                                    <div class="col-12 col-sm-6 col-md-4">
+                                    <div class="col-12 col-sm-12 col-md-6">
                                         <a class="video" data-require-init="magnific-popup.widget"
                                            data-type="iframe"
                                            href="<?php echo $video; ?>"

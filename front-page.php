@@ -3,8 +3,12 @@
 <?php
 
 use Brisum\Lib\ObjectManager;
+use Elastic\Product\ProductCategoryService;
 
 $objectManager = ObjectManager::getInstance();
+/** @var ProductCategoryService $productCategoryService */
+$productCategoryService = $objectManager->get('Elastic\Product\ProductCategoryService');
+$gridCategories = $productCategoryService->getTopCategories();
 
 the_post();
 

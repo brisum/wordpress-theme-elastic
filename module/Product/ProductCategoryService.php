@@ -2,7 +2,6 @@
 
 namespace Elastic\Product;
 
-use Elastic\Product\PostType\Product;
 use WP_Term;
 
 class ProductCategoryService
@@ -16,6 +15,20 @@ class ProductCategoryService
             'taxonomy' => self::TAXONOMY_PRODUCT_CATEGORY,
             'hide_empty' => false,
             'parent' => 0,
+            'orderby'       => 'term_order',
+            'order'         => 'ASC',
+        ]);
+
+        return $terms;
+    }
+
+    public function getSubCategories(WP_Term $category)
+    {
+        /** @var WP_Term[] $terms */
+        $terms = get_terms([
+            'taxonomy' => self::TAXONOMY_PRODUCT_CATEGORY,
+            'hide_empty' => false,
+            'parent' => $category->term_id,
             'orderby'       => 'term_order',
             'order'         => 'ASC',
         ]);

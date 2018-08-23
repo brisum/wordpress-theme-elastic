@@ -72,6 +72,7 @@ class DataProvider implements DataProviderInterface
         if ($currentTerm && !$currentList) {
             $productList = get_posts([
                 'post_type' => Product::POST_TYPE,
+                'numberposts' => -1,
                 'tax_query' => [
                     [
                         'taxonomy' => ProductCategoryService::TAXONOMY_PRODUCT_CATEGORY,
@@ -82,11 +83,12 @@ class DataProvider implements DataProviderInterface
             ]);
 
             usort($productList, [$this, 'sortPosts']);
+            $isSingle = is_single();
             foreach ($productList as $product) {
                 $currentList[$product->post_name] = [
                     'title' => get_the_title($product),
                     'href' => get_permalink($product),
-                    'classes' => ['post', $product->ID == $post->ID ? 'active' : ''],
+                    'classes' => ['post', $isSingle && $product->ID == $post->ID ? 'active' : ''],
                     'child' => []
                 ];
             }

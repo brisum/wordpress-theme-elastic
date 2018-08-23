@@ -11,12 +11,6 @@ ul.product-sidebar-menu {
     margin: 0;
   }
 
-  //> li.active {
-  //  border-left: 5px solid rgba($white, 0.8);
-  //  > a {
-  //    padding-left: $global-padding - 5px;
-  //  }
-  //}
   li {
     padding: 0;
     margin: 0;
@@ -28,6 +22,11 @@ ul.product-sidebar-menu {
   }
   li.post {
     background: $light-gray-primary;
+
+    &.active {
+      font-weight: 600;
+    }
+
     a {
       color: $body-color;
     }

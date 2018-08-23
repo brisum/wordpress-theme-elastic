@@ -29,6 +29,9 @@ class TermService
                 unset($terms[$termKey]);
             }
         }
+        if (!$lowestTerm) {
+            $lowestTerm = reset($terms);
+        }
         while ($terms) {
             $isUpdated = false;
 
