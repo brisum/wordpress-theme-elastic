@@ -27,13 +27,13 @@ $videoList = $ptProduct->getVideoList();
                 <?php if ($isSingleImage) : ?>
                     <div class="col-12 col-md-6">
                         <div class="preview">
-                            <img class="img-fluid" src="<?php echo reset($images)['full']; ?>">
+                            <img class="img-fluid" src="<?php echo reset($images)['preview']; ?>">
                         </div>
                     </div>
                 <?php else : ?>
                     <div class="col-12 col-md-6">
                         <div class="preview">
-                            <img class="img-fluid" src="<?php echo reset($images)['full']; ?>">
+                            <img class="img-fluid" src="<?php echo reset($images)['preview']; ?>">
                         </div>
                     </div>
                     <div class="col-12 col-md-6 thumbnails">

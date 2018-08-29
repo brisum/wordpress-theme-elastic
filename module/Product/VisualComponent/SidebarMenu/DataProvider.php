@@ -79,10 +79,12 @@ class DataProvider implements DataProviderInterface
                         'field' => 'id',
                         'terms' => $currentTerm->term_id
                     ]
-                ]
+                ],
+                'orderby' => 'date',
+                'order' => 'DESC',
             ]);
 
-            usort($productList, [$this, 'sortPosts']);
+            // usort($productList, [$this, 'sortPosts']);
             $isSingle = is_single();
             foreach ($productList as $product) {
                 $currentList[$product->post_name] = [

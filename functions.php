@@ -55,10 +55,6 @@ function twentyseventeen_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	add_image_size( 'twentyseventeen-featured-image', 2000, 1200, true );
-
-	add_image_size( 'twentyseventeen-thumbnail-avatar', 100, 100, true );
-
 	// Set the default content width.
 	$GLOBALS['content_width'] = 525;
 

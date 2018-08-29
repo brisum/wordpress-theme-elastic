@@ -34,7 +34,7 @@ class Product extends PostType
 
         if ($imageIds) {
             $imageId = reset($imageIds);
-            $thumbnail = $imageId ? wp_get_attachment_image_src($imageId, 'product_thumbnail')[0] : null;
+            $thumbnail = $imageId ? wp_get_attachment_image_src($imageId, 'woocommerce_thumbnail')[0] : null;
         }
 
         return $thumbnail;
@@ -56,7 +56,8 @@ class Product extends PostType
 
         foreach ($imageIds as $imageId) {
             $images[] = [
-                'thumbnail' => wp_get_attachment_image_src($imageId, 'product_thumbnail')[0],
+                'thumbnail' => wp_get_attachment_image_src($imageId, 'woocommerce_thumbnail')[0],
+                'preview' => wp_get_attachment_image_src($imageId, 'woocommerce_single')[0],
                 'full' => wp_get_attachment_image_src($imageId, 'full')[0]
             ];
         }

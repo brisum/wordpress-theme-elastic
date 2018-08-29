@@ -37,6 +37,7 @@ $load = [
     THEME_DIR . 'module/Resources/init.php',
     THEME_DIR . 'module/Theme/init.php',
     THEME_DIR . 'module/ViewedProducts/init.php',
+    THEME_DIR . 'module/Watermark/init.php',
     THEME_DIR . 'module/Woocommerce/init.php',
 ];
 
