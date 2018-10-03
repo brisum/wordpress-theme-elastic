@@ -9,6 +9,59 @@ class Watermark
      * @param string $watermarkPath
      * @param int $watermarkSize percent
      */
+    public function placeToCenter($imagePath, $watermarkPath, $watermarkSize = 90)
+    {
+        $image = imagecreatefromstring(file_get_contents($imagePath));
+        $imageWidth = imagesx($image);
+        $imageHeight = imagesY($image);
+        $watermarkOrig = imagecreatefrompng($watermarkPath);
+        $watermarkOrigSize = getimagesize($watermarkPath);
+        $watermarkWidth = round($imageWidth / 100 * $watermarkSize);
+        $watermarkHeight = round($watermarkWidth / $watermarkOrigSize[0] * $watermarkOrigSize[1]);
+
+        // resize watermark
+        $watermarkResized = imagecreatetruecolor($watermarkWidth, $watermarkHeight);
+        imagealphablending($watermarkResized, false);
+        imagesavealpha($watermarkResized,true);
+        $transparent = imagecolorallocatealpha($watermarkResized, 0, 0, 0, 127);
+        imagefilledrectangle($watermarkResized, 0, 0, $watermarkWidth, $watermarkHeight, $transparent);
+        imagecopyresampled(
+            $watermarkResized,
+            $watermarkOrig,
+            0,
+            0,
+            0,
+            0,
+            $watermarkWidth,
+            $watermarkHeight,
+            $watermarkOrigSize[0],
+            $watermarkOrigSize[1]
+        );
+        $this->imagesetopacity($watermarkResized, 0.6);
+
+        imagealphablending($im, true);
+        imagesavealpha($im, true);
+        imagecopy(
+            $image,
+            $watermarkResized,
+            $imageWidth / 2 - $watermarkWidth / 2,
+            $imageHeight / 2 - $watermarkHeight / 2,
+            0,
+            0,
+            $watermarkWidth,
+            $watermarkHeight
+        );
+        imagejpeg($image, $imagePath);
+
+        imagedestroy($image);
+        imagedestroy($watermarkOrig);
+    }
+
+    /**
+     * @param string $imagePath
+     * @param string $watermarkPath
+     * @param int $watermarkSize percent
+     */
     public function place($imagePath, $watermarkPath, $watermarkSize = 15)
     {
         $image = imagecreatefromstring(file_get_contents($imagePath));
