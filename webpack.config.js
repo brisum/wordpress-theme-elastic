@@ -11,7 +11,7 @@ const glob = require('glob');
 const rimraf = require('rimraf');
 const fs = require('fs');
 
-// Plugin
+// PluginPopupConfirm
 const extractTextPluginCss = new ExtractTextPlugin({
     filename: '[name].css?[contenthash]',
     allChunks: true
@@ -72,6 +72,12 @@ class Project {
                 let alias = 'lib-' + Project.generateAliasName(path, libBasePath);
                 self._aliases[alias] = path;
             });
+  
+          let utilsBasePath =  __dirname + '/resources/assets/src/js/utils/';
+          glob.sync(utilsBasePath + '**/*.js').forEach(function (path) {
+            let alias = path.replace(utilsBasePath, '').replace(/\.js$/, '');
+            self._aliases[alias] = path;
+          });
 
             let moduleBasePath =  __dirname + '/resources/assets/src/js/module/';
             glob.sync(moduleBasePath + '**/*.js').forEach(function (path) {

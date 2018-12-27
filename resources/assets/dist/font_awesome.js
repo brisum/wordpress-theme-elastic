@@ -61,12 +61,12 @@ var font_awesome =
 /******/ 	__webpack_require__.p = "/wp-content/themes/elastic/resources/assets/dist/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 39);
+/******/ 	return __webpack_require__(__webpack_require__.s = 43);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 39:
+/***/ 43:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -74,4 +74,4 @@ var font_awesome =
 /***/ })
 
 /******/ });
-//# sourceMappingURL=font_awesome.js.map?e61ff662e05ea32e909e
+//# sourceMappingURL=font_awesome.js.map?2a0d84da68ffcf1e71a4

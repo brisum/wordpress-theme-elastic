@@ -1,79 +1,91 @@
 {
   "popup-confirm.widget": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/popup-confirm.widget.0.js?0d2f5b3509baa9600d4b"
+    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/popup-confirm.widget.0.js?d0347653dc6e94e62915"
   },
   "form-confirmation.widget": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/form-confirmation.widget.1.js?07b8b97eb79b80a6ce02"
+    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/form-confirmation.widget.1.js?54b1df5792c68b258ce1"
   },
   "button-confirmation.widget": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/button-confirmation.widget.2.js?32efad64f353249d60fd"
+    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/button-confirmation.widget.2.js?e5dac83ce6dabecaa407"
   },
   "popup.widget": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/popup.widget.3.js?e5ed360d91c5739bcec0"
+    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/popup.widget.3.js?6409ce681969d9c9a5b8"
   },
   "popup-content.widget": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/popup-content.widget.4.js?aa21c80125614a976e8f"
+    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/popup-content.widget.4.js?93d2505eeaf9cb4e2a4b"
   },
   "astute-form.widget": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/astute-form.widget.5.js?0aa8cf915e220993cea8"
+    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/astute-form.widget.5.js?ca1417b72080cc7c5b6f"
   },
   "PopupConfirm": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/PopupConfirm.6.js?cda8f871c677e9b68d16"
+    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/PopupConfirm.6.js?b25a87c3a8b34c52dbfb"
   },
   "Popup": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/Popup.7.js?cc663234e72787fa575c"
+    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/Popup.7.js?a0b34667d3e81886f2e4"
   },
   "viewed-products.widget": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/viewed-products.widget.8.js?87e327816a2d9c46d2ae"
+    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/viewed-products.widget.8.js?bfb17038754971dbab55"
   },
   "slick": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/slick.9.js?1f649600a94ee4dfc1b8"
+    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/slick.9.js?04374d115e555c624b97"
   },
   "magnific_popup": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/magnific_popup.10.js?9b5f3fcffdf3b36dbe8d"
+    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/magnific_popup.10.js?3a461bf3954357b0cb39"
   },
   "slick.widget": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/slick.widget.11.js?f8308a7a307563b47d51"
+    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/slick.widget.11.js?b4cda9b277e803dc16f7"
+  },
+  "off-canvas-menu.widget": {
+    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/off-canvas-menu.widget.12.js?4cc6599f4d26678fc4e5"
   },
   "magnific-popup.widget": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/magnific-popup.widget.12.js?d01054080dc0bed79738"
+    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/magnific-popup.widget.13.js?ef4874566fde6e12a1e5"
   },
   "div-table.widget": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/div-table.widget.13.js?fb2e2cd438026c4e0624"
+    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/div-table.widget.14.js?83b4cf01a8985785ed5a"
   },
   "common-height.widget": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/common-height.widget.14.js?f7b55cd2b5bf69d7b913"
+    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/common-height.widget.15.js?f08eab17f3613ec093e3"
+  },
+  "ScrollToWidget": {
+    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/ScrollToWidget.16.js?7f37784d07f7789a975a"
+  },
+  "RatingWidget": {
+    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/RatingWidget.17.js?f9e6437953c95ecff06f"
+  },
+  "ProductReviewWidget": {
+    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/ProductReviewWidget.18.js?b575e23a98b5fda37526"
   },
   "PopupBootstrap": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/PopupBootstrap.15.js?0f44653f9c7c509deded"
+    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/PopupBootstrap.19.js?c34759b16b97b82e3d1b"
   },
   "checkout-one-click.widget": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/checkout-one-click.widget.16.js?2b05184e60ef968890f6"
+    "js": "/wp-content/themes/elastic/resources/assets/dist/js/chunk/checkout-one-click.widget.20.js?76269dbd7c7437ad759c"
   },
   "main": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/main.js?e7669608ccf58870442e"
+    "js": "/wp-content/themes/elastic/resources/assets/dist/main.js?0ebfa621b217f36aa678"
   },
   "slick_style": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/slick_style.js?45895100d216223bd928",
+    "js": "/wp-content/themes/elastic/resources/assets/dist/slick_style.js?2de5f8067ab4039b36e3",
     "css": "/wp-content/themes/elastic/resources/assets/dist/slick_style.css?3cc91d8cf646497634384451bb4ad932"
   },
   "magnific_popup_style": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/magnific_popup_style.js?a4054b44e13522d10208",
+    "js": "/wp-content/themes/elastic/resources/assets/dist/magnific_popup_style.js?e87373b01466a09af1e6",
     "css": "/wp-content/themes/elastic/resources/assets/dist/magnific_popup_style.css?fb23113257a9fa5042cf8eab75c7ae28"
   },
   "admin_main": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/admin_main.js?5c90509c0e8b221e1d47"
+    "js": "/wp-content/themes/elastic/resources/assets/dist/admin_main.js?426d2bd5c196eae86679"
   },
   "style": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/style.js?154f858099227763e988",
-    "css": "/wp-content/themes/elastic/resources/assets/dist/style.css?b309dd245514c0652bde9b2389023a08"
+    "js": "/wp-content/themes/elastic/resources/assets/dist/style.js?8a07164f2ac30b6dd997",
+    "css": "/wp-content/themes/elastic/resources/assets/dist/style.css?cc186bb6b560ba1f12204806ccb89063"
   },
   "admin_style": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/admin_style.js?6b24a57f1f38223a598f",
+    "js": "/wp-content/themes/elastic/resources/assets/dist/admin_style.js?c993152588a3a5393558",
     "css": "/wp-content/themes/elastic/resources/assets/dist/admin_style.css?d41d8cd98f00b204e9800998ecf8427e"
   },
   "font_awesome": {
-    "js": "/wp-content/themes/elastic/resources/assets/dist/font_awesome.js?e61ff662e05ea32e909e",
+    "js": "/wp-content/themes/elastic/resources/assets/dist/font_awesome.js?2a0d84da68ffcf1e71a4",
     "css": "/wp-content/themes/elastic/resources/assets/dist/font_awesome.css?359a568f2cdab59737b919eda429bf22"
   }
 }

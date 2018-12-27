@@ -30,7 +30,7 @@ var main =
 /******/
 /******/ 	// objects to store loaded and loading chunks
 /******/ 	var installedChunks = {
-/******/ 		17: 0
+/******/ 		21: 0
 /******/ 	};
 /******/
 /******/ 	// The require function
@@ -87,7 +87,7 @@ var main =
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "js/chunk/" + ({"0":"popup-confirm.widget","1":"form-confirmation.widget","2":"button-confirmation.widget","3":"popup.widget","4":"popup-content.widget","5":"astute-form.widget","6":"PopupConfirm","7":"Popup","8":"viewed-products.widget","9":"slick","10":"magnific_popup","11":"slick.widget","12":"magnific-popup.widget","13":"div-table.widget","14":"common-height.widget","15":"PopupBootstrap","16":"checkout-one-click.widget"}[chunkId]||chunkId) + "." + chunkId + ".js?" + {"0":"0d2f5b3509baa9600d4b","1":"07b8b97eb79b80a6ce02","2":"32efad64f353249d60fd","3":"e5ed360d91c5739bcec0","4":"aa21c80125614a976e8f","5":"0aa8cf915e220993cea8","6":"cda8f871c677e9b68d16","7":"cc663234e72787fa575c","8":"87e327816a2d9c46d2ae","9":"1f649600a94ee4dfc1b8","10":"9b5f3fcffdf3b36dbe8d","11":"f8308a7a307563b47d51","12":"d01054080dc0bed79738","13":"fb2e2cd438026c4e0624","14":"f7b55cd2b5bf69d7b913","15":"0f44653f9c7c509deded","16":"2b05184e60ef968890f6"}[chunkId] + "";
+/******/ 		script.src = __webpack_require__.p + "js/chunk/" + ({"0":"popup-confirm.widget","1":"form-confirmation.widget","2":"button-confirmation.widget","3":"popup.widget","4":"popup-content.widget","5":"astute-form.widget","6":"PopupConfirm","7":"Popup","8":"viewed-products.widget","9":"slick","10":"magnific_popup","11":"slick.widget","12":"off-canvas-menu.widget","13":"magnific-popup.widget","14":"div-table.widget","15":"common-height.widget","16":"ScrollToWidget","17":"RatingWidget","18":"ProductReviewWidget","19":"PopupBootstrap","20":"checkout-one-click.widget"}[chunkId]||chunkId) + "." + chunkId + ".js?" + {"0":"d0347653dc6e94e62915","1":"54b1df5792c68b258ce1","2":"e5dac83ce6dabecaa407","3":"6409ce681969d9c9a5b8","4":"93d2505eeaf9cb4e2a4b","5":"ca1417b72080cc7c5b6f","6":"b25a87c3a8b34c52dbfb","7":"a0b34667d3e81886f2e4","8":"bfb17038754971dbab55","9":"04374d115e555c624b97","10":"3a461bf3954357b0cb39","11":"b4cda9b277e803dc16f7","12":"4cc6599f4d26678fc4e5","13":"ef4874566fde6e12a1e5","14":"83b4cf01a8985785ed5a","15":"f08eab17f3613ec093e3","16":"7f37784d07f7789a975a","17":"f9e6437953c95ecff06f","18":"b575e23a98b5fda37526","19":"c34759b16b97b82e3d1b","20":"76269dbd7c7437ad759c"}[chunkId] + "";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {
@@ -269,8 +269,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     Object.keys(requireInitConfig.elements).forEach(function (elementKey) {
                         var $element = requireInitConfig.elements[elementKey],
                             requireInit = requireInitConfig.name,
-                            callback = requireInit.match(/.+\.widget$/) ? function (requireElement) {
-                            new requireElement($element);
+                            callback = requireInit.match(/.+Widget$/) || requireInit.match(/.+\.widget$/) ? function (requireElement) {
+                            if (requireElement && requireElement.__esModule && requireElement.default) {
+                                requireElement = requireElement.default;
+                            }
+                            var widget = new requireElement($element);
+                            widget._init();
                         } : function () {};
 
                         console.log('data-require-init', requireInit);
@@ -342,28 +346,44 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                                 BundleLoader.load([__webpack_require__(24)], callback);
                                 break;
 
-                            case 'popup-confirm.widget':
+                            case 'off-canvas-menu.widget':
                                 BundleLoader.load([__webpack_require__(25)], callback);
                                 break;
 
-                            case 'popup-content.widget':
+                            case 'popup-confirm.widget':
                                 BundleLoader.load([__webpack_require__(26)], callback);
                                 break;
 
-                            case 'popup.widget':
+                            case 'popup-content.widget':
                                 BundleLoader.load([__webpack_require__(27)], callback);
                                 break;
 
-                            case 'slick.widget':
+                            case 'popup.widget':
                                 BundleLoader.load([__webpack_require__(28)], callback);
                                 break;
 
-                            case 'checkout-one-click.widget':
+                            case 'ProductReviewWidget':
                                 BundleLoader.load([__webpack_require__(29)], callback);
                                 break;
 
-                            case 'viewed-products.widget':
+                            case 'RatingWidget':
                                 BundleLoader.load([__webpack_require__(30)], callback);
+                                break;
+
+                            case 'ScrollToWidget':
+                                BundleLoader.load([__webpack_require__(31)], callback);
+                                break;
+
+                            case 'slick.widget':
+                                BundleLoader.load([__webpack_require__(32)], callback);
+                                break;
+
+                            case 'checkout-one-click.widget':
+                                BundleLoader.load([__webpack_require__(33)], callback);
+                                break;
+
+                            case 'viewed-products.widget':
+                                BundleLoader.load([__webpack_require__(34)], callback);
                                 break;
 
                             default:
@@ -497,7 +517,7 @@ module.exports = function(cb) {
 	else cb(data);
 }
 __webpack_require__.e/* require.ensure */(9).then((function(require) {
-	data = __webpack_require__(43);
+	data = __webpack_require__(47);
 	var callbacks = cbs;
 	cbs = null;
 	for(var i = 0, l = callbacks.length; i < l; i++) {
@@ -516,7 +536,7 @@ module.exports = function(cb) {
 	else cb(data);
 }
 __webpack_require__.e/* require.ensure */(10).then((function(require) {
-	data = __webpack_require__(44);
+	data = __webpack_require__(48);
 	var callbacks = cbs;
 	cbs = null;
 	for(var i = 0, l = callbacks.length; i < l; i++) {
@@ -535,7 +555,7 @@ module.exports = function(cb) {
 	else cb(data);
 }
 __webpack_require__.e/* require.ensure */(7).then((function(require) {
-	data = __webpack_require__(41);
+	data = __webpack_require__(45);
 	var callbacks = cbs;
 	cbs = null;
 	for(var i = 0, l = callbacks.length; i < l; i++) {
@@ -898,8 +918,8 @@ module.exports = function(cb) {
 	if(cbs) cbs.push(cb);
 	else cb(data);
 }
-__webpack_require__.e/* require.ensure */(15).then((function(require) {
-	data = __webpack_require__(40);
+__webpack_require__.e/* require.ensure */(19).then((function(require) {
+	data = __webpack_require__(44);
 	var callbacks = cbs;
 	cbs = null;
 	for(var i = 0, l = callbacks.length; i < l; i++) {
@@ -918,7 +938,7 @@ module.exports = function(cb) {
 	else cb(data);
 }
 __webpack_require__.e/* require.ensure */(6).then((function(require) {
-	data = __webpack_require__(42);
+	data = __webpack_require__(46);
 	var callbacks = cbs;
 	cbs = null;
 	for(var i = 0, l = callbacks.length; i < l; i++) {
@@ -937,7 +957,7 @@ module.exports = function(cb) {
 	else cb(data);
 }
 __webpack_require__.e/* require.ensure */(5).then((function(require) {
-	data = __webpack_require__(45);
+	data = __webpack_require__(49);
 	var callbacks = cbs;
 	cbs = null;
 	for(var i = 0, l = callbacks.length; i < l; i++) {
@@ -956,7 +976,7 @@ module.exports = function(cb) {
 	else cb(data);
 }
 __webpack_require__.e/* require.ensure */(2).then((function(require) {
-	data = __webpack_require__(46);
+	data = __webpack_require__(50);
 	var callbacks = cbs;
 	cbs = null;
 	for(var i = 0, l = callbacks.length; i < l; i++) {
@@ -974,8 +994,8 @@ module.exports = function(cb) {
 	if(cbs) cbs.push(cb);
 	else cb(data);
 }
-__webpack_require__.e/* require.ensure */(14).then((function(require) {
-	data = __webpack_require__(47);
+__webpack_require__.e/* require.ensure */(15).then((function(require) {
+	data = __webpack_require__(51);
 	var callbacks = cbs;
 	cbs = null;
 	for(var i = 0, l = callbacks.length; i < l; i++) {
@@ -993,8 +1013,8 @@ module.exports = function(cb) {
 	if(cbs) cbs.push(cb);
 	else cb(data);
 }
-__webpack_require__.e/* require.ensure */(13).then((function(require) {
-	data = __webpack_require__(48);
+__webpack_require__.e/* require.ensure */(14).then((function(require) {
+	data = __webpack_require__(52);
 	var callbacks = cbs;
 	cbs = null;
 	for(var i = 0, l = callbacks.length; i < l; i++) {
@@ -1013,7 +1033,7 @@ module.exports = function(cb) {
 	else cb(data);
 }
 __webpack_require__.e/* require.ensure */(1).then((function(require) {
-	data = __webpack_require__(49);
+	data = __webpack_require__(53);
 	var callbacks = cbs;
 	cbs = null;
 	for(var i = 0, l = callbacks.length; i < l; i++) {
@@ -1031,8 +1051,8 @@ module.exports = function(cb) {
 	if(cbs) cbs.push(cb);
 	else cb(data);
 }
-__webpack_require__.e/* require.ensure */(12).then((function(require) {
-	data = __webpack_require__(50);
+__webpack_require__.e/* require.ensure */(13).then((function(require) {
+	data = __webpack_require__(54);
 	var callbacks = cbs;
 	cbs = null;
 	for(var i = 0, l = callbacks.length; i < l; i++) {
@@ -1050,8 +1070,8 @@ module.exports = function(cb) {
 	if(cbs) cbs.push(cb);
 	else cb(data);
 }
-__webpack_require__.e/* require.ensure */(0).then((function(require) {
-	data = __webpack_require__(51);
+__webpack_require__.e/* require.ensure */(12).then((function(require) {
+	data = __webpack_require__(55);
 	var callbacks = cbs;
 	cbs = null;
 	for(var i = 0, l = callbacks.length; i < l; i++) {
@@ -1069,8 +1089,8 @@ module.exports = function(cb) {
 	if(cbs) cbs.push(cb);
 	else cb(data);
 }
-__webpack_require__.e/* require.ensure */(4).then((function(require) {
-	data = __webpack_require__(52);
+__webpack_require__.e/* require.ensure */(0).then((function(require) {
+	data = __webpack_require__(56);
 	var callbacks = cbs;
 	cbs = null;
 	for(var i = 0, l = callbacks.length; i < l; i++) {
@@ -1088,8 +1108,8 @@ module.exports = function(cb) {
 	if(cbs) cbs.push(cb);
 	else cb(data);
 }
-__webpack_require__.e/* require.ensure */(3).then((function(require) {
-	data = __webpack_require__(53);
+__webpack_require__.e/* require.ensure */(4).then((function(require) {
+	data = __webpack_require__(57);
 	var callbacks = cbs;
 	cbs = null;
 	for(var i = 0, l = callbacks.length; i < l; i++) {
@@ -1107,8 +1127,8 @@ module.exports = function(cb) {
 	if(cbs) cbs.push(cb);
 	else cb(data);
 }
-__webpack_require__.e/* require.ensure */(11).then((function(require) {
-	data = __webpack_require__(54);
+__webpack_require__.e/* require.ensure */(3).then((function(require) {
+	data = __webpack_require__(58);
 	var callbacks = cbs;
 	cbs = null;
 	for(var i = 0, l = callbacks.length; i < l; i++) {
@@ -1126,8 +1146,8 @@ module.exports = function(cb) {
 	if(cbs) cbs.push(cb);
 	else cb(data);
 }
-__webpack_require__.e/* require.ensure */(16).then((function(require) {
-	data = __webpack_require__(55);
+__webpack_require__.e/* require.ensure */(18).then((function(require) {
+	data = __webpack_require__(59);
 	var callbacks = cbs;
 	cbs = null;
 	for(var i = 0, l = callbacks.length; i < l; i++) {
@@ -1145,8 +1165,84 @@ module.exports = function(cb) {
 	if(cbs) cbs.push(cb);
 	else cb(data);
 }
+__webpack_require__.e/* require.ensure */(17).then((function(require) {
+	data = __webpack_require__(60);
+	var callbacks = cbs;
+	cbs = null;
+	for(var i = 0, l = callbacks.length; i < l; i++) {
+		callbacks[i](data);
+	}
+}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var cbs = [], 
+	data;
+module.exports = function(cb) {
+	if(cbs) cbs.push(cb);
+	else cb(data);
+}
+__webpack_require__.e/* require.ensure */(16).then((function(require) {
+	data = __webpack_require__(61);
+	var callbacks = cbs;
+	cbs = null;
+	for(var i = 0, l = callbacks.length; i < l; i++) {
+		callbacks[i](data);
+	}
+}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var cbs = [], 
+	data;
+module.exports = function(cb) {
+	if(cbs) cbs.push(cb);
+	else cb(data);
+}
+__webpack_require__.e/* require.ensure */(11).then((function(require) {
+	data = __webpack_require__(62);
+	var callbacks = cbs;
+	cbs = null;
+	for(var i = 0, l = callbacks.length; i < l; i++) {
+		callbacks[i](data);
+	}
+}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var cbs = [], 
+	data;
+module.exports = function(cb) {
+	if(cbs) cbs.push(cb);
+	else cb(data);
+}
+__webpack_require__.e/* require.ensure */(20).then((function(require) {
+	data = __webpack_require__(63);
+	var callbacks = cbs;
+	cbs = null;
+	for(var i = 0, l = callbacks.length; i < l; i++) {
+		callbacks[i](data);
+	}
+}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var cbs = [], 
+	data;
+module.exports = function(cb) {
+	if(cbs) cbs.push(cb);
+	else cb(data);
+}
 __webpack_require__.e/* require.ensure */(8).then((function(require) {
-	data = __webpack_require__(56);
+	data = __webpack_require__(64);
 	var callbacks = cbs;
 	cbs = null;
 	for(var i = 0, l = callbacks.length; i < l; i++) {
@@ -1156,4 +1252,4 @@ __webpack_require__.e/* require.ensure */(8).then((function(require) {
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=main.js.map?e7669608ccf58870442e
+//# sourceMappingURL=main.js.map?0ebfa621b217f36aa678

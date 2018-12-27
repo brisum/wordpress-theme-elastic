@@ -1,6 +1,6 @@
-webpackJsonp_name_([3,7,15],{
+webpackJsonp_name_([3,7,19],{
 
-/***/ 40:
+/***/ 44:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -76,13 +76,13 @@ module.exports = PopupBootstrap;
 
 /***/ }),
 
-/***/ 41:
+/***/ 45:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _PopupBootstrap2 = __webpack_require__(40);
+var _PopupBootstrap2 = __webpack_require__(44);
 
 var _PopupBootstrap3 = _interopRequireDefault(_PopupBootstrap2);
 
@@ -110,7 +110,7 @@ module.exports = Popup;
 
 /***/ }),
 
-/***/ 53:
+/***/ 58:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -126,7 +126,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(0), __webpack_require__(2), __webpack_require__(3), __webpack_require__(41)], __WEBPACK_AMD_DEFINE_RESULT__ = (function ($, Widget, RequireInit, Popup) {
+!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(0), __webpack_require__(2), __webpack_require__(3), __webpack_require__(45)], __WEBPACK_AMD_DEFINE_RESULT__ = (function ($, Widget, RequireInit, Popup) {
     var PopupWidget = function (_Widget) {
         _inherits(PopupWidget, _Widget);
 
@@ -180,4 +180,4 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 /***/ })
 
 });
-//# sourceMappingURL=popup.widget.3.js.map?e5ed360d91c5739bcec0
+//# sourceMappingURL=popup.widget.3.js.map?6409ce681969d9c9a5b8

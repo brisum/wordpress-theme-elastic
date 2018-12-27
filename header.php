@@ -59,17 +59,21 @@ $menuService = $objectManager->get('Elastic\Menu\MenuService');
 <header>
     <div class="header-top clearfix">
         <div class="container clearfix">
-            <span class="phones">
-                <i class="fa fa-mobile" aria-hidden="true"></i>
-                <?php echo implode(', ', $themeService->getPhones()); ?>
-            </span>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse2" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse2">
+                    <?php $menuService->theNavBar(); ?>
+                </div>
+            </nav>
 
             <span class="email">
                 <i class="fa fa-envelope-o" aria-hidden="true"></i>
                 <?php echo $themeService->getEmail(); ?>
             </span>
 
-            <?php get_search_form(true); ?>
         </div>
     </div>
     <div class="header-bottom clearfix">
@@ -79,19 +83,15 @@ $menuService = $objectManager->get('Elastic\Menu\MenuService');
                      alt="">
             </a>
 
+            <?php get_search_form(true); ?>
+
             <button type="button" class="btn btn-success toogle-popup-question" data-toggle="modal" data-target="#popup-question">
                 Задать вопрос
             </button>
 
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse2" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarCollapse2">
-                    <?php $menuService->theNavBar(); ?>
-                </div>
-            </nav>
+            <div class="phones">
+                <?php echo implode(' ', $themeService->getPhones()); ?>
+            </div>
         </div>
     </div>
 </header>

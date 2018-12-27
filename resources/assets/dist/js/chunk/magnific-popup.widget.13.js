@@ -1,6 +1,6 @@
-webpackJsonp_name_([12],{
+webpackJsonp_name_([13],{
 
-/***/ 50:
+/***/ 54:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -76,4 +76,4 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 /***/ })
 
 });
-//# sourceMappingURL=magnific-popup.widget.12.js.map?d01054080dc0bed79738
+//# sourceMappingURL=magnific-popup.widget.13.js.map?ef4874566fde6e12a1e5

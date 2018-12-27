@@ -61,20 +61,20 @@ var magnific_popup_style =
 /******/ 	__webpack_require__.p = "/wp-content/themes/elastic/resources/assets/dist/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 37);
+/******/ 	return __webpack_require__(__webpack_require__.s = 41);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 37:
+/***/ 41:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(38);
+module.exports = __webpack_require__(42);
 
 
 /***/ }),
 
-/***/ 38:
+/***/ 42:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -82,4 +82,4 @@ module.exports = __webpack_require__(38);
 /***/ })
 
 /******/ });
-//# sourceMappingURL=magnific_popup_style.js.map?a4054b44e13522d10208
+//# sourceMappingURL=magnific_popup_style.js.map?e87373b01466a09af1e6

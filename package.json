@@ -4,7 +4,9 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "NODE_ENV=development webpack --watch",
+    "build": "NODE_ENV=production webpack --optimize-minimize"
   },
   "author": "",
   "license": "ISC",

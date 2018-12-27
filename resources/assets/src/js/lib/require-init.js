@@ -33,12 +33,15 @@ function($,        BundleLoader) {
                 Object.keys(requireInitConfig.elements).forEach(function (elementKey) {
                     let $element = requireInitConfig.elements[elementKey],
                         requireInit = requireInitConfig.name,
-                        callback = requireInit.match(/.+\.widget$/)
+                        callback = requireInit.match(/.+Widget$/) || requireInit.match(/.+\.widget$/)
                             ? (function (requireElement) {
-                                new requireElement($element);
+                                if (requireElement && requireElement.__esModule && requireElement.default) {
+                                    requireElement = requireElement.default;
+                                }
+                                let widget = new requireElement($element);
+                                widget._init();
                             })
-                            : (function () {
-                            });
+                            : (function () {});
 
                     console.log('data-require-init', requireInit);
 
@@ -125,6 +128,11 @@ function($,        BundleLoader) {
                             break;
                         
 
+                        case 'off-canvas-menu.widget':
+                            BundleLoader.load([require('bundle-loader?&name=off-canvas-menu.widget!off-canvas-menu.widget')], callback);
+                            break;
+                        
+
                         case 'popup-confirm.widget':
                             BundleLoader.load([require('bundle-loader?&name=popup-confirm.widget!popup-confirm.widget')], callback);
                             break;
@@ -137,6 +145,21 @@ function($,        BundleLoader) {
 
                         case 'popup.widget':
                             BundleLoader.load([require('bundle-loader?&name=popup.widget!popup.widget')], callback);
+                            break;
+                        
+
+                        case 'ProductReviewWidget':
+                            BundleLoader.load([require('bundle-loader?&name=ProductReviewWidget!ProductReviewWidget')], callback);
+                            break;
+                        
+
+                        case 'RatingWidget':
+                            BundleLoader.load([require('bundle-loader?&name=RatingWidget!RatingWidget')], callback);
+                            break;
+                        
+
+                        case 'ScrollToWidget':
+                            BundleLoader.load([require('bundle-loader?&name=ScrollToWidget!ScrollToWidget')], callback);
                             break;
                         
 

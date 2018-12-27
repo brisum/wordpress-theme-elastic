@@ -1,6 +1,6 @@
 webpackJsonp_name_([11],{
 
-/***/ 54:
+/***/ 62:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65,4 +65,4 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 /***/ })
 
 });
-//# sourceMappingURL=slick.widget.11.js.map?f8308a7a307563b47d51
+//# sourceMappingURL=slick.widget.11.js.map?b4cda9b277e803dc16f7

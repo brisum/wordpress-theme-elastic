@@ -1,6 +1,6 @@
-webpackJsonp_name_([16],{
+webpackJsonp_name_([20],{
 
-/***/ 55:
+/***/ 63:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -108,4 +108,4 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 /***/ })
 
 });
-//# sourceMappingURL=checkout-one-click.widget.16.js.map?2b05184e60ef968890f6
+//# sourceMappingURL=checkout-one-click.widget.20.js.map?76269dbd7c7437ad759c

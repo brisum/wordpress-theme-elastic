@@ -61,28 +61,28 @@ var slick_style =
 /******/ 	__webpack_require__.p = "/wp-content/themes/elastic/resources/assets/dist/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 34);
+/******/ 	return __webpack_require__(__webpack_require__.s = 38);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 34:
+/***/ 38:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(35);
-module.exports = __webpack_require__(36);
+__webpack_require__(39);
+module.exports = __webpack_require__(40);
 
 
 /***/ }),
 
-/***/ 35:
+/***/ 39:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 36:
+/***/ 40:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -90,4 +90,4 @@ module.exports = __webpack_require__(36);
 /***/ })
 
 /******/ });
-//# sourceMappingURL=slick_style.js.map?45895100d216223bd928
+//# sourceMappingURL=slick_style.js.map?2de5f8067ab4039b36e3

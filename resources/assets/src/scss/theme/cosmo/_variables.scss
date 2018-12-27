@@ -1,11 +1,34 @@
 // Cosmo 4.1.1
 // Bootswatch
 
+$font-family-lato: 'Lato', sans-serif;
+
+@mixin font-family-lato-light {
+  font-family: $font-family-lato;
+  font-weight: 300;
+}
+
+@mixin font-family-lato-regular {
+  font-family: $font-family-lato;
+  font-weight: normal;
+}
+
+@mixin font-family-lato-semibold {
+  font-family: $font-family-lato;
+  font-weight: 600;
+}
+
+@mixin font-family-lato-bold {
+  font-family: $font-family-lato;
+  font-weight: 800;
+}
+
 //
 // Color system
 //
 $blue-primary: #67809f;
-$red-primary: #ef4136;
+$red-primary: #b64d46;
+$red-light-primary: #ddaca9;
 $green-primary: #2B8601; // Matching Gradient
 $light-gray-primary: #f7f7f7;
 $gray-primary: darken($light-gray-primary, 10%);
@@ -33,7 +56,8 @@ $green:   #7DCD00 !default;
 $teal:    #20c997 !default;
 $cyan:    #9954BB !default;
 
-$primary:       $blue-primary !default;
+$primary:       $red-primary !default;
+$primary-light: $red-light-primary !default;
 $secondary:     $gray-800 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -42,9 +66,23 @@ $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
 
-// Options
 
-$enable-rounded: false !default;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 992px, //960px,
+  xl: 992px //1140px
+);
+
+// Options
 
 // Body
 

@@ -1,6 +1,6 @@
 webpackJsonp_name_([8],{
 
-/***/ 56:
+/***/ 64:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14,7 +14,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(0), __webpack_require__(2), __webpack_require__(4), __webpack_require__(1), __webpack_require__(3), __webpack_require__(57)], __WEBPACK_AMD_DEFINE_RESULT__ = (function ($, Widget, SourceLoader, BundleLoader, RequireInit, ViewedProducts) {
+!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(0), __webpack_require__(2), __webpack_require__(4), __webpack_require__(1), __webpack_require__(3), __webpack_require__(65)], __WEBPACK_AMD_DEFINE_RESULT__ = (function ($, Widget, SourceLoader, BundleLoader, RequireInit, ViewedProducts) {
     var ViewedProductsWidget = function (_Widget) {
         _inherits(ViewedProductsWidget, _Widget);
 
@@ -63,7 +63,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 /***/ }),
 
-/***/ 57:
+/***/ 65:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -125,4 +125,4 @@ module.exports = ViewedProducts;
 /***/ })
 
 });
-//# sourceMappingURL=viewed-products.widget.8.js.map?87e327816a2d9c46d2ae
+//# sourceMappingURL=viewed-products.widget.8.js.map?bfb17038754971dbab55
