@@ -1,16 +1,47 @@
 body.page-id-72 {
-  h1 {
-    margin-bottom: 0;
-  }
-
   .content {
     margin-top: 30px;
     margin-bottom: 30px;
   }
 
+  .div-table .div-tbody .div-tr {
+    &:hover {
+      background-color: $white;
+    }
+
+    &:nth-child(odd),
+    &:hover:nth-child(odd) {
+      background-color: $light-gray-primary;
+    }
+  }
+
+  .div-table .div-td,
+  .div-table .div-th {
+    padding: 5px 10px;
+  }
+
   .div-table.price-list {
     .div-tr.category {
-      background: $light-gray-primary;
+      color: white;
+      background: $primary;
+
+      &:nth-child(odd),
+      &:hover:nth-child(odd) {
+        color: white;
+        background: $primary;
+      }
+    }
+
+    .title a {
+      color: $body-color;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    .price {
+      text-align: right;
     }
   }
 }

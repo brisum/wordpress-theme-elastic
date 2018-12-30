@@ -21,47 +21,28 @@ $videoList = $ptProduct->getVideoList();
 </h1>
 
 <div class="content">
-    <?php if ($images) : ?>
-        <div class="images-block">
-            <div class="row">
-                <?php if ($isSingleImage) : ?>
-                    <div class="col-12 col-md-6">
-                        <div class="preview">
-                            <img class="img-fluid" src="<?php echo reset($images)['preview']; ?>">
-                        </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-7">
+            <div class="images-block">
+                <?php foreach ($images as $image) : ?>
+                    <div class="preview">
+                        <img class="img-fluid" src="<?php echo reset($images)['preview']; ?>">
                     </div>
-                <?php else : ?>
-                    <div class="col-12 col-md-6">
-                        <div class="preview">
-                            <img class="img-fluid" src="<?php echo reset($images)['preview']; ?>">
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 thumbnails">
-                        <?php foreach ($images as $image) : ?>
-                            <div class="thumbnail-wrapper">
-                                <div class="thumbnail">
-                                    <img class="img-fluid" src="<?php echo $image['thumbnail']; ?>">
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
-                <?php endif; ?>
+                <?php endforeach; ?>
             </div>
         </div>
-    <?php endif; ?>
 
-    <div class="price-block">
-        <div class="row">
-            <div class="col-sm-6">
+        <div class="col-sm-12 col-md-5 text-center">
+            <div class="price-block">
                 <?php if ($price) : ?>
-                    Цена: <span class="price-value"><?php echo $product->get_price_html(); ?></span>
+                    <span class="price-value"><?php echo $product->get_price_html(); ?></span>
                 <?php endif; ?>
-            </div>
 
-            <div class="col-sm-6">
+                <div class="clear"></div>
+
                 <button type="button"
                         value="<?php echo esc_attr( $product->get_id() ); ?>"
-                        class="btn btn-success"
+                        class="btn btn-primary"
                         data-require-init="checkout-one-click.widget">
                     Оформить заказ
                 </button>

@@ -10,7 +10,7 @@ body.home {
 
     h1 {
       padding-bottom: 0;
-      margin-bottom: $global-margin * 2;
+      margin-bottom: $global-margin * 1;
       border-bottom: none;
       font-size: 30px;
       @include font-family-lato-bold;
@@ -22,7 +22,6 @@ body.home {
     }
 
     .catalog-wrapper {
-      padding-top: $global-padding;
       padding-left: $global-padding * 2;
 
       a.btn {
@@ -35,8 +34,15 @@ body.home {
     margin-right: -450px;
   }
 
-  .product-category-grid {
+  .product-categories {
+    margin-top: $global-margin * 3;
     margin-bottom: $global-margin * 2;
+
+    h2 {
+      font-size: 24px;
+      margin: 0 0 $global-margin 0;
+      @include font-family-lato-bold;
+    }
   }
 
   .about_us {
@@ -75,17 +81,78 @@ body.home {
         background-size: cover;
 
         &.store {
-          background-image: url("./../../../src/img/about-item/store.svg");
+          background-image: url("./../../../src/img/home/about-item/store.svg");
         }
         &.world-cooperation {
-          background-image: url("./../../../src/img/about-item/world-cooperation.svg");
+          background-image: url("./../../../src/img/home/about-item/world-cooperation.svg");
         }
         &.task {
-          background-image: url("./../../../src/img/about-item/task.svg");
+          background-image: url("./../../../src/img/home/about-item/task.svg");
         }
         &.delivery {
-          background-image: url("./../../../src/img/about-item/delivery.svg");
+          background-image: url("./../../../src/img/home/about-item/delivery.svg");
         }
+      }
+    }
+  }
+
+  .contacts {
+    width: 100%;
+    overflow-x: hidden;
+    background: rgba($red-primary, 0.8);
+
+    .contact-form {
+      padding-top: $global-padding * 3;
+
+      .form-title {
+        margin-bottom: $global-margin * 2;
+        font-size: 24px;
+        color: $white;
+        @include font-family-lato-bold;
+      }
+
+      .row > .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      input,
+      textarea {
+        padding: 6px;
+        background: transparent;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid white;
+        color: $white;
+
+        &::placeholder {
+          color: $white;
+        }
+      }
+      input {
+        width: 60%;
+      }
+      textarea {
+        height: 35px;
+      }
+
+      button,
+      button:active,
+      button:focus:active {
+        float: left;
+        width: 190px;
+        background: white;
+        color: $body-color;
+        box-shadow: none;
+      }
+    }
+
+    #contact-map {
+      margin-right: -450px;
+
+      .google-map-viewport {
+        height: 600px;
       }
     }
   }

@@ -1,0 +1,65 @@
+body.page-id-7 {
+  .content-block {
+    margin-bottom: 25px;
+  }
+
+  h2 {
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+    border-bottom: 3px solid $primary;
+    font-size: 18px;
+    @include font-family-lato-semibold;
+  }
+
+  .shipment-title {
+    font-size: 18px;
+    line-height: 18px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .shipment-method {
+    width: 100%;
+    padding: 20px $global-padding 45px;
+    text-align: center;
+
+    &:hover {
+      @include block-shadow;
+    }
+
+
+    &.nova-poshta {
+      img {
+        height: 51px;
+        margin-top: 9px;
+      }
+    }
+
+    img {
+      height: 60px;
+      width: auto;
+    }
+  }
+
+  .shipment-regions {
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+  }
+
+  .payment-method {
+    width: 100%;
+    padding: 20px $global-padding 45px;
+    text-align: center;
+
+    &:hover {
+      @include block-shadow;
+    }
+
+    img {
+      height: 60px;
+      width: auto;
+    }
+  }
+}

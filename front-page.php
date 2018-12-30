@@ -2,16 +2,71 @@
 
 <?php
 
+use Brisum\Lib\Form\AbstractForm;
 use Brisum\Lib\ObjectManager;
 use Elastic\Product\ProductCategoryService;
+use Elastic\Theme\ThemeService;
 
 $objectManager = ObjectManager::getInstance();
+/** @var ThemeService $themeService */
+$themeService = $objectManager->get('Elastic\Theme\ThemeService');
 /** @var ProductCategoryService $productCategoryService */
 $productCategoryService = $objectManager->get('Elastic\Product\ProductCategoryService');
 $gridCategories = $productCategoryService->getTopCategories();
+/** @var AbstractForm $contactForm */
+$contactForm = $objectManager->get('Elastic\Form\Contact\ContactForm');
 
 the_post();
 global $post;
+
+$mapSettings = [
+    'center' => [
+        'x' => 30.5480,
+        'y' => 50.3735
+    ],
+    'zoom' => 17,
+    'scrollwheel' => false,
+    'zoomControl' => true,
+    'mapTypeControl' => false,
+    'scaleControl' => false,
+    'streetViewControl' => false,
+    'rotateControl' => false,
+    'fullscreenControl' => false,
+    'styles' => [
+        [
+            "featureType" => "all",
+            "stylers" => [
+                ["saturation" => 0],
+                ["hue" => "#e7ecf0"]
+            ]
+        ],
+        [
+            "featureType" => "road",
+            "stylers" => [
+                ["saturation" => -70]
+            ]
+        ],
+        [
+            "featureType" => "transit",
+            "stylers" => [
+                ["visibility" => "off"]
+            ]
+        ],
+        [
+            "featureType" => "poi",
+            "stylers" => [
+                ["visibility" => "off"]
+            ]
+        ],
+        [
+            "featureType" => "water",
+            "stylers" => [
+                ["visibility" => "simplified"],
+                ["saturation" => -60]
+            ]
+        ]
+    ]
+];
 
 ?>
 
@@ -38,12 +93,14 @@ global $post;
     </div>
 </div>
 
-<div class="container">
-    <h2 class="text-center">Товары</h2>
+<div class="product-categories">
+    <div class="container">
+        <h2 class="text-center">Товары</h2>
 
-    <div class="row product-category-grid">
-        <div class="col-12">
-            <?php get_template_part('template-parts/product/product-category-grid'); ?>
+        <div class="row product-category-grid">
+            <div class="col-12">
+                <?php get_template_part('template-parts/product/product-category-grid'); ?>
+            </div>
         </div>
     </div>
 </div>
@@ -88,6 +145,31 @@ global $post;
                     Уверенно поставляем упаковочное запаечное оборудование крупным фирмам
                     которые занимаются упаковкой во всех сферах деятельности что связано
                     с упаковкой какого либо продукта.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="contacts">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-5 contact-form">
+                <?php echo $contactForm->content(); ?>
+            </div>
+            <div class="col-xs-12 col-md-7 contact-map">
+                <div id="contact-map"
+                     data-require-init="GoogleMapWidget"
+                     data-key="AIzaSyDuz68DDNdiAru9vKwIef_De9lVhRwRsvg"
+                     data-settings='<?php echo json_encode($mapSettings); ?>'>
+                    <ul class="locations" style="display: none">
+                        <li data-x="30.5480238"
+                            data-y="50.3728194"
+                            data-info-state="open">
+                            <?php echo $themeService->getAddress(); ?>
+                        </li>
+                    </ul>
+                    <div class="google-map-viewport" style="width: 100%; height: 400px;"></div>
                 </div>
             </div>
         </div>

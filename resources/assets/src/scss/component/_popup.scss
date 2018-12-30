@@ -1,15 +1,28 @@
 #popup,
 #popup-question {
+  .modal-header {
+    position: relative;
+    padding-top: $global-padding * 2;
+    padding-bottom: $global-padding * 2;
+    border-bottom: none;
+  }
+  .modal-body .modal-header {
+    margin-top: -1 * $global-padding;
+    margin-left: -1 * $global-padding;
+    margin-right: -1 * $global-padding;
+  }
+
   .modal-title {
-    font-size: 1.5em;
+    width: 100%;
+    font-size: 1.5rem;
     line-height: 1;
-    font-weight: 500;
+    @include font-family-lato-bold;
+    text-align: center;
   }
 
   .popup-title {
-    margin: 0 (-1 * $global-margin) $global-margin;
-    padding: 0 $global-padding $global-padding $global-padding;
-    border-bottom: 1px solid $underline-border-color;
+    width: 100%;
+    text-align: center;
     font-size: 1.5em;
     line-height: 1;
     font-weight: 500;
@@ -21,13 +34,50 @@
 
   .modal-content button.close {
     position: absolute;
-    top: 5px;
-    right: 10px;
+    top: -15px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    background: $primary;
+    color: $white;
     z-index: 3;
+    opacity: 1;
   }
 
   .modal-body {
     min-height: 100px;
+
+    form {
+      margin-left: $global-margin;
+      margin-right: $global-margin;
+    }
+
+    input,
+    textarea {
+      padding-left: 0;
+      padding-right: 0;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid $body-color;
+
+      &:focus {
+        border-bottom: 1px solid $primary;
+      }
+    }
+
+    textarea {
+      height: 35px;
+    }
+  }
+
+  button[type="submit"] {
+    width: 190px;
+    margin: 0 auto;
+    margin-bottom: $global-margin;
   }
 
   &.loading .modal-body:before {

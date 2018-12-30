@@ -12,7 +12,7 @@ $pageName = $post->post_name;
 
 ?>
 <div class="container">
-    <div class="row">
+    <div class="row row-has-sidebar">
         <div class="col-xs-12 col-md-3">
             <?php $objectManager->create('Elastic\Product\VisualComponent\ProductCategorySidebarMenu')->render(); ?>
         </div>

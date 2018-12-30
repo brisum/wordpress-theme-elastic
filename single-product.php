@@ -11,7 +11,7 @@ $hasCategory = get_query_var(ProductCategoryService::TAXONOMY_PRODUCT_CATEGORY);
 ?>
 
 <div class="container">
-    <div class="row">
+    <div class="row row-product-grid">
         <div class="col-xs-12 col-md-3">
             <?php $objectManager->create('Elastic\Product\VisualComponent\ProductCategorySidebarMenu')->render(); ?>
         </div>

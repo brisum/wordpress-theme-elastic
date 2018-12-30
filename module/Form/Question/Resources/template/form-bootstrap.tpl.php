@@ -19,60 +19,48 @@
     <div class="form-group">
         <?php if (!empty($form['errors']['question_name'])) : ?>
             <p class="error-message" style="color:#d30808;"><?php echo $form['errors']['question_name'] ?></p>
-        <?php else: ?>
-        <label for="question_name">
-            Имя:
-        </label>
         <?php endif; ?>
         <input type="text" class="form-control" id="question_name"
                name="question_name"
                value="<?php echo isset($form['fields']['question_name']) ? $form['fields']['question_name'] : ''; ?>"
+               placeholder="Имя"
                required >
     </div>
 
      <div class="form-group">
          <?php if (!empty($form['errors']['question_phone'])) : ?>
              <p class="error-message" style="color:#d30808;"><?php echo $form['errors']['question_phone'] ?></p>
-         <?php else: ?>
-             <label for="question_phone">
-                 Телефон:
-             </label>
          <?php endif; ?>
          <input type="text" class="form-control" id="question_phone"
                 name="question_phone"
                 value="<?php echo isset($form['fields']['question_phone']) ? $form['fields']['question_phone'] : ''; ?>"
+                placeholder="Телефон"
                 required >
      </div>
 
     <div class="form-group">
         <?php if (!empty($form['errors']['question_email'])) : ?>
         <p class="error-message" style="color:#d30808;"><?php echo $form['errors']['question_email'] ?></p>
-        <?php else: ?>
-        <label for="question_email">
-            Email:
-        </label>
         <?php endif; ?>
         <input type="email" class="form-control" id="question_email"
                name="question_email"
                value="<?php echo isset($form['fields']['question_email']) ? $form['fields']['question_email'] : ''; ?>"
+               placeholder="Email"
                required >
     </div>
 
     <div class="form-group">
         <?php if (!empty($form['errors']['question_message'])) : ?>
         <p class="error-message" style="color:#d30808;"><?php echo $form['errors']['question_message'] ?></p>
-        <?php else: ?>
-        <label for="question_message">
-            Вопрос:
-        </label>
         <?php endif; ?>
         <textarea class="form-control" id="question_message"
                name="question_message"
+               placeholder="Вопрос"
                required
         ><?php echo isset($form['fields']['question_message']) ? $form['fields']['question_message'] : ''; ?></textarea>
     </div>
 
     <div class="form-group text-center">
-        <button type="submit" class="btn btn-success">Отправить</button>
+        <button type="submit" class="btn btn-primary">Отправить</button>
     </div>
 </form>

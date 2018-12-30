@@ -1,3 +1,7 @@
+<div class="modal-header">
+    <div class="popup-title">Оформление заказа</div>
+</div>
+
 <form method="post" action="" id="checkout-one-click" class="astute-form has-block-loader"
       data-astute-form
       data-redirect="<?php echo !empty($form['redirect']) ? $form['redirect'] : '' ?>"
@@ -22,7 +26,6 @@
                name="checkout1click[payment_term]"
                value="<?php echo isset($form['fields']['payment_term']) ? $form['fields']['payment_term'] : ''; ?>">
 
-        <div class="popup-title">Оформление заказа</div>
         <div class="detail">
             Пожалуйста, укажите Ваше имя, номер телефона и email, менеджер свяжется с вами в ближайшее время для уточнения деталей.
         </div>
@@ -38,42 +41,35 @@
         <div class="form-group">
             <?php if (!empty($form['errors']['name'])) : ?>
             <p class="error-message" style="color:#ff0033;"><?php echo $form['errors']['name'] ?></p>
-            <?php else: ?>
-            <label for="checkout1click_name">
-                Имя
-            </label>
             <?php endif; ?>
             <input type="text" class="form-control" id="checkout1click_name"
                    name="checkout1click[name]"
+                   placeholder="Имя"
                    value="<?php echo isset($form['fields']['name']) ? $form['fields']['name'] : ''; ?>">
         </div>
 
         <div class="form-group">
             <?php if (!empty($form['errors']['email'])) : ?>
             <p class="error-message" style="color: #ff0033;"><?php echo $form['errors']['email'] ?></p>
-            <?php else: ?>
-            <label for="checkout1click_email">Email</label>
             <?php endif; ?>
             <input type="text" class="form-control" id="checkout1click_email"
                    name="checkout1click[email]"
+                   placeholder="Email"
                    value="<?php echo isset($form['fields']['email']) ? $form['fields']['email'] : ''; ?>">
         </div>
 
         <div class="form-group">
             <?php if (!empty($form['errors']['phone'])) : ?>
             <p class="error-message" style="color: #ff0033;"><?php echo $form['errors']['phone'] ?></p>
-            <?php else: ?>
-            <label for="checkout1click_phone">
-                Телефон
-            </label>
             <?php endif; ?>
             <input type="text" class="form-control" id="checkout1click_phone"
                    name="checkout1click[phone]"
+                   placeholder="Телефон"
                    value="<?php echo isset($form['fields']['phone']) ? $form['fields']['phone'] : ''; ?>">
         </div>
 
         <div class="form-group text-center">
-            <button type="submit" class="btn btn-success">
+            <button type="submit" class="btn btn-primary">
                 Оформить заказ
             </button>
         </div>

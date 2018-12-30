@@ -13,15 +13,19 @@ body.page-id-6 {
 
   .contact-form {
     .form-title {
-      border-bottom: 1px solid $underline-border-color;
       margin-bottom: $global-margin;
-      font-size: 1.5em;
-      font-weight: 500;
+      font-size: 24px;
+      @include font-family-lato-semibold;
       text-align: center;
     }
 
     textarea {
       height: 140px;
+    }
+
+    button {
+      width: 190px;
+      max-width: 100%;
     }
   }
 }

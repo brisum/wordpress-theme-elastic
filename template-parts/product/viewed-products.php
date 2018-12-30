@@ -50,7 +50,10 @@ $slickSettings = [
 
 ?>
 
-<div class="viewed-products-title">Просмотренные товары</div>
+<div class="viewed-products-title">
+    <i class="fa fa-eye"></i>
+    Просмотренные товары
+</div>
 
 <div class="viewed-products-viewport product-list"
     data-require-init="slick.widget"

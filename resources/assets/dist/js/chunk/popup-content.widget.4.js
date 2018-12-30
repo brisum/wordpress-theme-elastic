@@ -1,6 +1,6 @@
-webpackJsonp_name_([4,7,19],{
+webpackJsonp_name_([4,7,20],{
 
-/***/ 44:
+/***/ 46:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -76,13 +76,13 @@ module.exports = PopupBootstrap;
 
 /***/ }),
 
-/***/ 45:
+/***/ 47:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _PopupBootstrap2 = __webpack_require__(44);
+var _PopupBootstrap2 = __webpack_require__(46);
 
 var _PopupBootstrap3 = _interopRequireDefault(_PopupBootstrap2);
 
@@ -110,7 +110,7 @@ module.exports = Popup;
 
 /***/ }),
 
-/***/ 57:
+/***/ 61:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -126,7 +126,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(0), __webpack_require__(2), __webpack_require__(3), __webpack_require__(45)], __WEBPACK_AMD_DEFINE_RESULT__ = (function ($, Widget, RequireInit, Popup) {
+!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(0), __webpack_require__(2), __webpack_require__(3), __webpack_require__(47)], __WEBPACK_AMD_DEFINE_RESULT__ = (function ($, Widget, RequireInit, Popup) {
     var PopupContentWidget = function (_Widget) {
         _inherits(PopupContentWidget, _Widget);
 
@@ -179,4 +179,4 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 /***/ })
 
 });
-//# sourceMappingURL=popup-content.widget.4.js.map?93d2505eeaf9cb4e2a4b
+//# sourceMappingURL=popup-content.widget.4.js.map?e8b0bd27ea46b3290002

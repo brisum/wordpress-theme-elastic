@@ -83,6 +83,11 @@ function($,        BundleLoader) {
                             break;
                         
 
+                        case 'GoogleMap':
+                            BundleLoader.load([require('bundle-loader?&name=GoogleMap!GoogleMap')], callback);
+                            break;
+                        
+
                         case 'Popup':
                             BundleLoader.load([require('bundle-loader?&name=Popup!Popup')], callback);
                             break;
@@ -120,6 +125,11 @@ function($,        BundleLoader) {
 
                         case 'form-confirmation.widget':
                             BundleLoader.load([require('bundle-loader?&name=form-confirmation.widget!form-confirmation.widget')], callback);
+                            break;
+                        
+
+                        case 'GoogleMapWidget':
+                            BundleLoader.load([require('bundle-loader?&name=GoogleMapWidget!GoogleMapWidget')], callback);
                             break;
                         
 

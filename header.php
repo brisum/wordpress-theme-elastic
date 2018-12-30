@@ -78,19 +78,24 @@ $menuService = $objectManager->get('Elastic\Menu\MenuService');
     </div>
     <div class="header-bottom clearfix">
         <div class="container">
-            <a class="navbar-brand logo" href="<?php echo !is_front_page() ? home_url('/') : '#' ?>">
-                <img src="<?php echo THEME_URI; ?>/resources/assets/src/img/logo.svg?<?php echo THEME_VERSION; ?>"
-                     alt="">
-            </a>
+            <div class="row">
+                <div class="col-xs-12 col-md-5">
+                    <a class="navbar-brand logo" href="<?php echo !is_front_page() ? home_url('/') : '#' ?>">
+                        <img src="<?php echo THEME_URI; ?>/resources/assets/src/img/logo.svg?<?php echo THEME_VERSION; ?>"
+                             alt="">
+                    </a>
 
-            <?php get_search_form(true); ?>
+                    <?php get_search_form(true); ?>
+                </div>
+                <div class="col-xs-12 col-md-7">
+                    <div class="phones">
+                        <?php echo implode(' ', $themeService->getPhones()); ?>
+                    </div>
 
-            <button type="button" class="btn btn-success toogle-popup-question" data-toggle="modal" data-target="#popup-question">
-                Задать вопрос
-            </button>
-
-            <div class="phones">
-                <?php echo implode(' ', $themeService->getPhones()); ?>
+                    <button type="button" class="btn btn-success toogle-popup-question" data-toggle="modal" data-target="#popup-question">
+                        Задать вопрос
+                    </button>
+                </div>
             </div>
         </div>
     </div>

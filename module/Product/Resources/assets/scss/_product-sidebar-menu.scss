@@ -2,8 +2,12 @@ ul.product-sidebar-menu {
   padding: 0;
   margin: 0 0;
   list-style: none;
-  background: $green-primary;
-  color: $white;
+
+  & > li {
+    border-right: 1px solid $gray-primary;
+    border-bottom: 1px solid $gray-primary;
+    margin-bottom: 4px;
+  }
 
   ul {
     list-style: none;
@@ -12,30 +16,43 @@ ul.product-sidebar-menu {
   }
 
   li {
-    padding: 0;
-    margin: 0;
-    border-bottom: 1px solid rgba($white, 0.5);
+    position: relative;
 
-    &:last-child {
-      border-bottom: none;
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 14px;
+      right: 10px;
+      width: 7px;
+      height: 7px;
+      border-right: 1px solid $black;
+      border-bottom: 1px solid $black;
+      transform: rotate(45deg);
     }
-  }
-  li.post {
-    background: $light-gray-primary;
 
     &.active {
-      font-weight: 600;
+      & > a {
+        color: $primary;
+      }
+
+      &:after {
+        top: 18px;
+        border-right: 1px solid $primary;
+        border-bottom: 1px solid $primary;
+        transform: rotate(225deg);
+      }
     }
 
-    a {
-      color: $body-color;
+    &.post:after,
+    &.post.active:after {
+      display: none;
     }
   }
 
   a {
     display: block;
-    padding: $global-padding/2 $global-padding;
-    color: $white;
+    padding: $global-padding/2 25px $global-padding/2 0;
+    color: $body-color;
     text-decoration: none;
 
     &:hover {
@@ -43,25 +60,55 @@ ul.product-sidebar-menu {
     }
   }
 
-  ul {
-    background: #68BD43;
-
-    a {
-      padding-left: $global-padding * 2;
+  & li > ul {
+    & > li > a {
+      padding-left: $global-padding;
     }
+
     li.post a {
       padding-left: $global-padding;
     }
 
-    ul {
-      background: #A2F779;
-
+    & > li > ul {
       a {
         padding-left: $global-padding * 3;
       }
       li.post a {
         padding-left: $global-padding * 2;
       }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .row-has-sidebar {
+    margin-bottom: $global-margin * 2;
+
+    h1 {
+      margin-left: -0.5 * $global-margin;
+      margin-right: -0.5 * $global-margin;
+    }
+
+    & > .col-md-3 {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+
+    & > .col-md-9 {
+      flex: 0 0 70%;
+      max-width: 70%;
+
+      & > .content {
+        margin-left: -0.5 * $global-margin;
+        margin-right: -0.5 * $global-margin;
+      }
+    }
+  }
+
+  .product-category-grid {
+    .col-12.col-md-4 {
+      padding-left: $global-padding / 2;
+      padding-right: $global-padding / 2;
     }
   }
 }

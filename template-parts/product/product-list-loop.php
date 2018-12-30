@@ -29,13 +29,15 @@ use Elastic\Product\PostType\Product;
             </a>
 
             <div class="info-wrapper">
-                <div class="name">
-                    <a href="<?php echo $link ?>">
-                        <?php  echo get_the_title(); ?>
-                    </a>
-                </div>
-                <div class="price-wrapper text-center">
-                    <?php echo $product->get_price_html(); ?>
+                <div class="info-inner">
+                    <div class="name">
+                        <a href="<?php echo $link ?>">
+                            <?php  echo get_the_title(); ?>
+                        </a>
+                    </div>
+                    <div class="price-wrapper text-center">
+                        <?php echo $product->get_price_html(); ?>
+                    </div>
                 </div>
             </div>
         </div>

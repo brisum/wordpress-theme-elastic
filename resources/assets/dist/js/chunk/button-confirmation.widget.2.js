@@ -1,6 +1,6 @@
-webpackJsonp_name_([2,6,19],{
+webpackJsonp_name_([2,6,20],{
 
-/***/ 44:
+/***/ 46:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -76,13 +76,13 @@ module.exports = PopupBootstrap;
 
 /***/ }),
 
-/***/ 46:
+/***/ 48:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _PopupBootstrap2 = __webpack_require__(44);
+var _PopupBootstrap2 = __webpack_require__(46);
 
 var _PopupBootstrap3 = _interopRequireDefault(_PopupBootstrap2);
 
@@ -110,7 +110,7 @@ module.exports = PopupConfirm;
 
 /***/ }),
 
-/***/ 50:
+/***/ 53:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -126,7 +126,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(0), __webpack_require__(2), __webpack_require__(46)], __WEBPACK_AMD_DEFINE_RESULT__ = (function ($, Widget, PopupConfirm) {
+!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(0), __webpack_require__(2), __webpack_require__(48)], __WEBPACK_AMD_DEFINE_RESULT__ = (function ($, Widget, PopupConfirm) {
     var FormConfirmationWidget = function (_Widget) {
         _inherits(FormConfirmationWidget, _Widget);
 
@@ -186,4 +186,4 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 /***/ })
 
 });
-//# sourceMappingURL=button-confirmation.widget.2.js.map?e5dac83ce6dabecaa407
+//# sourceMappingURL=button-confirmation.widget.2.js.map?916afea4f7e9419bd64b

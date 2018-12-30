@@ -1,32 +1,69 @@
 .viewed-products {
-  margin-top: $global-margin * 2;
+  margin-bottom: $global-margin * 2;
 
   .viewed-products-title {
-    font-size: 2em;
+    font-size: 1.5rem;
     font-weight: 500;
-    margin-bottom: $global-margin;
   }
 
-  .slick-slider .slick-arrow.slick-prev {
-    left: 0;
-  }
-  .slick-slider .slick-arrow.slick-next {
-    right: 0;
+  .viewed-products-viewport {
+    margin-left: 40px;
+    margin-right: 40px;
   }
 
   .slick-track {
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin-left: unset;
     margin-right: unset;
+  }
+
+  .slick-slider .slick-arrow,
+  .slick-slider .slick-arrow:focus {
+    width: 40px;
+    height: 50px;
+    margin-top: -25px;
+    margin-bottom: 0;
+    border-radius: 0;
+    background: $primary;
+  }
+
+  .slick-slider .slick-arrow.slick-disabled {
+    opacity: 0.5;
+    visibility: visible;
+
+    &:before {
+      opacity: 1;
+    }
+    &:after {
+      opacity: 1;
+    }
+  }
+  .slick-slider .slick-arrow.slick-prev {
+    left: -40px;
+  }
+  .slick-slider .slick-arrow.slick-next {
+    right: -40px;
+  }
+  .slick-slider .slick-arrow.slick-prev:after,
+  .slick-slider .slick-arrow.slick-prev:before,
+  .slick-slider .slick-arrow.slick-next:after,
+  .slick-slider .slick-arrow.slick-next:before {
+    right: 35%;
+    opacity: 1;
   }
 
   .slick-slide {
     .col-xs-12,
     .col-md-4 {
       max-width: none;
+      padding-left: $global-padding / 2;
+      padding-right: $global-padding / 2;
     }
 
     .product {
       font-size: $font-size-base;
+      margin-bottom: 0;
     }
   }
 }

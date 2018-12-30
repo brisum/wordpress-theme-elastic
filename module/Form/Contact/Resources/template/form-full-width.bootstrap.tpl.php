@@ -70,6 +70,6 @@
      </div>
 
     <div class="form-group text-center">
-        <button type="submit" class="btn btn-success">Отправить</button>
+        <button type="submit" class="btn btn-primary">Отправить</button>
     </div>
 </form>
